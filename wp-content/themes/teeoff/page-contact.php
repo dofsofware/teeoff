@@ -15,12 +15,12 @@ $teeoff_page_id = get_the_ID();
 	<div class="container contact__grid">
 		<div class="contact__info">
 			<?php
-			$img = get_theme_mod( 'teeoff_contact_image' );
-			if ( $img ) {
-				printf( '<div class="teeoff-media ratio-4-3"><img src="%1$s" alt="" loading="lazy"></div>', esc_url( $img ) );
-			} else {
-				teeoff_media_image( array( 'ref' => '12.1', 'label' => __( 'Illustration Contact (prompt 12.1)', 'teeoff' ), 'ratio' => 'ratio-4-3' ) );
-			}
+			teeoff_page_media_image( $teeoff_page_id, 'contact_image', array(
+				'ratio'      => 'ratio-4-3',
+				'legacy_mod' => 'teeoff_contact_image',
+				'ref'        => '12.1',
+				'label'      => __( 'Illustration Contact (prompt 12.1)', 'teeoff' ),
+			) );
 			?>
 
 			<ul class="contact-details">

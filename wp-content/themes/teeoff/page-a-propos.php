@@ -15,12 +15,12 @@ $teeoff_page_id = get_the_ID();
 	<div class="container about-team__grid">
 		<div class="about-team__media">
 			<?php
-			$img = get_theme_mod( 'teeoff_about_team_image' );
-			if ( $img ) {
-				printf( '<div class="teeoff-media ratio-4-3"><img src="%1$s" alt="" loading="lazy"></div>', esc_url( $img ) );
-			} else {
-				teeoff_media_image( array( 'ref' => '10.1', 'label' => __( 'Equipe TeeOff (prompt 10.1)', 'teeoff' ), 'ratio' => 'ratio-4-3' ) );
-			}
+			teeoff_page_media_image( $teeoff_page_id, 'about_team_image', array(
+				'ratio'      => 'ratio-4-3',
+				'legacy_mod' => 'teeoff_about_team_image',
+				'ref'        => '10.1',
+				'label'      => __( 'Equipe TeeOff (prompt 10.1)', 'teeoff' ),
+			) );
 			?>
 		</div>
 		<div class="about-team__text">
@@ -34,12 +34,13 @@ $teeoff_page_id = get_the_ID();
 <section class="section about-vision about-vision--dark">
 	<div class="about-vision__media">
 		<?php
-		$img = get_theme_mod( 'teeoff_about_vision_image' );
-		if ( $img ) {
-			printf( '<div class="teeoff-media ratio-fill"><img src="%1$s" alt="" loading="lazy"></div>', esc_url( $img ) );
-		} else {
-			teeoff_media_image( array( 'ref' => '10.2', 'label' => __( 'Vision TeeOff (prompt 10.2)', 'teeoff' ), 'ratio' => 'ratio-fill' ) );
-		}
+		teeoff_page_media_image( $teeoff_page_id, 'about_vision_image', array(
+			'ratio'      => 'ratio-fill',
+			'size'       => 'teeoff-banner',
+			'legacy_mod' => 'teeoff_about_vision_image',
+			'ref'        => '10.2',
+			'label'      => __( 'Vision TeeOff (prompt 10.2)', 'teeoff' ),
+		) );
 		?>
 		<div class="about-vision__overlay"></div>
 	</div>

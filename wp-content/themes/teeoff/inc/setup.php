@@ -28,17 +28,13 @@ function teeoff_setup() {
 }
 add_action( 'after_setup_theme', 'teeoff_setup' );
 
-function teeoff_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Pied de page', 'teeoff' ),
-		'id'            => 'footer-1',
-		'before_widget' => '<div class="footer-widget">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="footer-widget-title">',
-		'after_title'   => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'teeoff_widgets_init' );
+/**
+ * No widget-ready footer area: WordPress auto-assigns its default
+ * widgets (Archives, Categories) the first time a theme registers a
+ * sidebar, which broke the 4-column footer grid layout. The footer's
+ * Navigation / Informations / Contact columns already cover everything
+ * the site needs there.
+ */
 
 function teeoff_scripts() {
 	wp_enqueue_style( 'teeoff-google-fonts', 'https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap', array(), null );

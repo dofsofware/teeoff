@@ -61,3 +61,34 @@ function teeoff_register_cpts() {
 	) );
 }
 add_action( 'init', 'teeoff_register_cpts' );
+
+/**
+ * Shows a thumbnail column in the admin list tables for Solutions and
+ * Partenaires so editors can see at a glance which entries still need an
+ * image, without having to open every single one.
+ */
+function teeoff_add_thumbnail_column( $columns ) {
+	$new = array();
+	foreach ( $columns as $key => $label ) {
+		if ( 'title' === $key ) {
+			$new['teeoff_thumbnail'] = __( 'Image', 'teeoff' );
+		}
+		$new[ $key ] = $label;
+	}
+	return $new;
+}
+add_filter( 'manage_solution_posts_columns', 'teeoff_add_thumbnail_column' );
+add_filter( 'manage_partenaire_posts_columns', 'teeoff_add_thumbnail_column' );
+
+function teeoff_render_thumbnail_column( $column, $post_id ) {
+	if ( 'teeoff_thumbnail' !== $column ) {
+		return;
+	}
+	if ( has_post_thumbnail( $post_id ) ) {
+		echo get_the_post_thumbnail( $post_id, array( 60, 60 ), array( 'style' => 'object-fit:cover;border-radius:4px;' ) );
+	} else {
+		echo '<span style="color:#a00;">' . esc_html__( 'Aucune image', 'teeoff' ) . '</span>';
+	}
+}
+add_action( 'manage_solution_posts_custom_column', 'teeoff_render_thumbnail_column', 10, 2 );
+add_action( 'manage_partenaire_posts_custom_column', 'teeoff_render_thumbnail_column', 10, 2 );

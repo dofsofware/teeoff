@@ -6,12 +6,14 @@ $teeoff_page_id = get_the_ID();
 <section class="page-hero page-hero--tech">
 	<div class="page-hero__media">
 		<?php
-		$img = get_theme_mod( 'teeoff_careers_image' );
-		if ( $img ) {
-			printf( '<div class="teeoff-media ratio-fill"><img src="%1$s" alt="" loading="eager"></div>', esc_url( $img ) );
-		} else {
-			teeoff_media_image( array( 'ref' => '13', 'label' => __( 'Illustration Carrieres (prompt 13)', 'teeoff' ), 'ratio' => 'ratio-fill' ) );
-		}
+		teeoff_page_media_image( $teeoff_page_id, 'hero_bg_image', array(
+			'ratio'                 => 'ratio-fill',
+			'size'                  => 'teeoff-banner',
+			'legacy_mod'            => 'teeoff_careers_image',
+			'use_featured_fallback' => true,
+			'ref'                   => '13',
+			'label'                 => __( 'Illustration Carrieres (prompt 13)', 'teeoff' ),
+		) );
 		?>
 		<div class="page-hero__overlay"></div>
 	</div>

@@ -16,6 +16,9 @@ function teeoff_solution_meta_box_html( $post ) {
 	$benefits = get_post_meta( $post->ID, '_teeoff_benefits', true );
 	$card_ref = get_post_meta( $post->ID, '_teeoff_card_ref', true );
 	?>
+	<div class="teeoff-image-hint">
+		<?php esc_html_e( "Pour changer l'image de cette carte : utilisez le bloc \"Image mise en avant\" dans la colonne de droite (au-dessus).", 'teeoff' ); ?>
+	</div>
 	<p>
 		<label for="teeoff_subtitle"><strong><?php esc_html_e( 'Accroche courte (affichee sur la carte)', 'teeoff' ); ?></strong></label><br>
 		<input type="text" id="teeoff_subtitle" name="teeoff_subtitle" value="<?php echo esc_attr( $subtitle ); ?>" class="widefat">
@@ -25,9 +28,9 @@ function teeoff_solution_meta_box_html( $post ) {
 		<textarea id="teeoff_benefits" name="teeoff_benefits" rows="5" class="widefat"><?php echo esc_textarea( $benefits ); ?></textarea>
 	</p>
 	<p>
-		<label for="teeoff_card_ref"><strong><?php esc_html_e( 'Reference prompt Leonardo (image de carte)', 'teeoff' ); ?></strong></label><br>
+		<label for="teeoff_card_ref"><strong><?php esc_html_e( 'Reference prompt Leonardo (suggestion pour generer une image)', 'teeoff' ); ?></strong></label><br>
 		<input type="text" id="teeoff_card_ref" name="teeoff_card_ref" value="<?php echo esc_attr( $card_ref ); ?>" class="widefat" placeholder="ex: 4.1">
-		<span class="description"><?php esc_html_e( 'Voir references/leonardo-ai-prompts.md', 'teeoff' ); ?></span>
+		<span class="description"><?php esc_html_e( "Ce champ n'affiche pas d'image, c'est juste un renvoi vers references/leonardo-ai-prompts.md.", 'teeoff' ); ?></span>
 	</p>
 	<?php
 }

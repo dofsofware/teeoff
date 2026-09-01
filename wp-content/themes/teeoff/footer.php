@@ -45,11 +45,10 @@
 			<?php if ( $phone ) : ?><p><a href="tel:<?php echo esc_attr( preg_replace( '/\s+/', '', $phone ) ); ?>"><?php echo esc_html( $phone ); ?></a></p><?php endif; ?>
 			<?php if ( $email ) : ?><p><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></p><?php endif; ?>
 			<?php if ( $address ) : ?><p><?php echo esc_html( $address ); ?></p><?php endif; ?>
+			<?php if ( ! $phone && ! $email && ! $address ) : ?>
+				<p><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Nous contacter', 'teeoff' ); ?></a></p>
+			<?php endif; ?>
 		</div>
-
-		<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-			<div class="footer-widgets"><?php dynamic_sidebar( 'footer-1' ); ?></div>
-		<?php endif; ?>
 	</div>
 
 	<div class="site-footer__bottom">

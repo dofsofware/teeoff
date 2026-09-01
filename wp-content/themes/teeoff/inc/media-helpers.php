@@ -89,6 +89,60 @@ function teeoff_media_video( $args = array() ) {
 }
 
 /**
+ * Resolves and renders an image for a given page + field key, trying in
+ * order: the image chosen in the "Contenu de la page (TeeOff)" box, the
+ * legacy Customizer setting (kept for sites configured before that box
+ * existed), the page's own Featured Image (only when explicitly allowed —
+ * used for hero banners), and finally the Leonardo prompt placeholder.
+ */
+function teeoff_page_media_image( $post_id, $key, $args = array() ) {
+	$defaults = array(
+		'ratio'                 => 'ratio-4-3',
+		'size'                  => 'teeoff-card',
+		'ref'                   => '',
+		'label'                 => '',
+		'legacy_mod'            => '',
+		'use_featured_fallback' => false,
+		'alt'                   => '',
+		'class'                 => '',
+	);
+	$args = wp_parse_args( $args, $defaults );
+
+	$attach_id = function_exists( 'teeoff_image' ) ? teeoff_image( $post_id, $key, $args['use_featured_fallback'] ) : 0;
+	if ( $attach_id ) {
+		teeoff_media_image( array(
+			'image_id' => $attach_id,
+			'ratio'    => $args['ratio'],
+			'size'     => $args['size'],
+			'alt'      => $args['alt'],
+			'class'    => $args['class'],
+		) );
+		return;
+	}
+
+	if ( $args['legacy_mod'] ) {
+		$url = get_theme_mod( $args['legacy_mod'] );
+		if ( $url ) {
+			printf(
+				'<div class="teeoff-media %1$s %2$s"><img src="%3$s" alt="%4$s" loading="lazy"></div>',
+				esc_attr( $args['ratio'] ),
+				esc_attr( $args['class'] ),
+				esc_url( $url ),
+				esc_attr( $args['alt'] )
+			);
+			return;
+		}
+	}
+
+	teeoff_media_image( array(
+		'ref'   => $args['ref'],
+		'label' => $args['label'],
+		'ratio' => $args['ratio'],
+		'class' => $args['class'],
+	) );
+}
+
+/**
  * Small on-page reminder for logged-in editors: dotted placeholders map to
  * references/leonardo-ai-prompts.md by the number shown on the block.
  */

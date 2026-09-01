@@ -303,8 +303,8 @@ iframe { border: 0; }
 
 .site-footer { background: var(--teeoff-primary); color: rgba(255,255,255,.82); }
 .site-footer__grid {
-	display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px;
-	padding-block: var(--section-pad);
+	display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px;
+	padding-block: clamp(40px, 6vw, 72px);
 }
 .footer-tagline { margin: 14px 0 18px; font-family: var(--font-heading); font-weight: 600; color: rgba(255,255,255,.92); }
 .footer-social { display: flex; gap: 10px; }

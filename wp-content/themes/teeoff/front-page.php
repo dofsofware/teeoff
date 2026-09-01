@@ -6,14 +6,19 @@ $teeoff_page_id = get_the_ID();
 <section class="hero">
 	<div class="hero__media">
 		<?php
-		$hero_video     = get_theme_mod( 'teeoff_hero_video' );
-		$hero_image_url = get_theme_mod( 'teeoff_hero_image' );
+		$hero_video = get_theme_mod( 'teeoff_hero_video' );
 		if ( $hero_video ) {
 			teeoff_media_video( array( 'video_url' => $hero_video, 'ratio' => 'ratio-fill' ) );
-		} elseif ( $hero_image_url ) {
-			printf( '<div class="teeoff-media ratio-fill"><img src="%1$s" alt="%2$s" loading="eager"></div>', esc_url( $hero_image_url ), esc_attr__( 'TeeOff Technologies — services vocaux accessibles', 'teeoff' ) );
 		} else {
-			teeoff_media_image( array( 'ref' => '2.1', 'label' => __( 'Hero — personne utilisant un telephone (prompt 2.1)', 'teeoff' ), 'ratio' => 'ratio-fill' ) );
+			teeoff_page_media_image( $teeoff_page_id, 'hero_image', array(
+				'ratio'                 => 'ratio-fill',
+				'size'                  => 'teeoff-banner',
+				'legacy_mod'            => 'teeoff_hero_image',
+				'use_featured_fallback' => true,
+				'alt'                   => __( 'TeeOff Technologies — services vocaux accessibles', 'teeoff' ),
+				'ref'                   => '2.1',
+				'label'                 => __( 'Hero — personne utilisant un telephone (prompt 2.1)', 'teeoff' ),
+			) );
 		}
 		?>
 		<div class="hero__overlay"></div>
@@ -32,12 +37,12 @@ $teeoff_page_id = get_the_ID();
 	<div class="container mission__grid">
 		<div class="mission__media">
 			<?php
-			$mission_img = get_theme_mod( 'teeoff_mission_image' );
-			if ( $mission_img ) {
-				printf( '<div class="teeoff-media ratio-1-1"><img src="%1$s" alt="" loading="lazy"></div>', esc_url( $mission_img ) );
-			} else {
-				teeoff_media_image( array( 'ref' => '3.1', 'label' => __( 'Illustration Mission (prompt 3.1)', 'teeoff' ), 'ratio' => 'ratio-1-1' ) );
-			}
+			teeoff_page_media_image( $teeoff_page_id, 'mission_image', array(
+				'ratio'      => 'ratio-1-1',
+				'legacy_mod' => 'teeoff_mission_image',
+				'ref'        => '3.1',
+				'label'      => __( 'Illustration Mission (prompt 3.1)', 'teeoff' ),
+			) );
 			?>
 		</div>
 		<div class="mission__text">
@@ -82,14 +87,17 @@ $teeoff_page_id = get_the_ID();
 <section class="section technology technology--dark">
 	<div class="technology__media">
 		<?php
-		$tech_video  = get_theme_mod( 'teeoff_technology_video' );
-		$tech_poster = get_theme_mod( 'teeoff_technology_poster' );
+		$tech_video = get_theme_mod( 'teeoff_technology_video' );
 		if ( $tech_video ) {
 			teeoff_media_video( array( 'video_url' => $tech_video, 'ratio' => 'ratio-fill' ) );
-		} elseif ( $tech_poster ) {
-			printf( '<div class="teeoff-media ratio-fill"><img src="%1$s" alt="" loading="lazy"></div>', esc_url( $tech_poster ) );
 		} else {
-			teeoff_media_video( array( 'ref' => '7.1 / 15.3', 'label' => __( 'Video/illustration Technologie (prompt 7.1 / 15.3)', 'teeoff' ), 'ratio' => 'ratio-fill' ) );
+			teeoff_page_media_image( $teeoff_page_id, 'technology_poster', array(
+				'ratio'      => 'ratio-fill',
+				'size'       => 'teeoff-banner',
+				'legacy_mod' => 'teeoff_technology_poster',
+				'ref'        => '7.1 / 15.3',
+				'label'      => __( 'Video/illustration Technologie (prompt 7.1 / 15.3)', 'teeoff' ),
+			) );
 		}
 		?>
 		<div class="technology__overlay"></div>
