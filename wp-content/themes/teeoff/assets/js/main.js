@@ -55,22 +55,22 @@
 		try {
 			gsap.registerPlugin( ScrollTrigger );
 
-			/* Hero entrance: a short, calm fade-and-rise on load */
+			/* Hero entrance: a slow, calm fade-and-rise on load */
 			if ( heroTargets.length ) {
-				gsap.set( heroTargets, { opacity: 0, y: 22 } );
+				gsap.set( heroTargets, { opacity: 0, y: 26 } );
 				gsap.to( heroTargets, {
-					opacity: 1, y: 0, duration: .8, ease: 'power3.out', stagger: .12, delay: .15
+					opacity: 1, y: 0, duration: 1.4, ease: 'power2.out', stagger: .25, delay: .2
 				} );
 			}
 
 			/* Sections and cards ease in as they enter the viewport */
 			if ( revealTargets.length ) {
-				gsap.set( revealTargets, { opacity: 0, y: 28 } );
+				gsap.set( revealTargets, { opacity: 0, y: 32 } );
 				ScrollTrigger.batch( revealTargets, {
-					start: 'top 85%',
+					start: 'top 88%',
 					once: true,
 					onEnter: function ( batch ) {
-						gsap.to( batch, { opacity: 1, y: 0, duration: .7, ease: 'power2.out', stagger: .1 } );
+						gsap.to( batch, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out', stagger: .18 } );
 					}
 				} );
 			}
