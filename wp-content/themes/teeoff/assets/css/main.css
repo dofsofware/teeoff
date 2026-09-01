@@ -128,7 +128,7 @@ iframe { border: 0; }
 .ratio-4-3 { aspect-ratio: 4 / 3; }
 .ratio-1-1 { aspect-ratio: 1 / 1; }
 .ratio-fill { position: absolute; inset: 0; border-radius: 0; }
-.ratio-logo { aspect-ratio: auto; height: 40px; background: none; }
+.ratio-logo { aspect-ratio: auto; height: 72px; background: none; }
 .ratio-logo img { object-fit: contain; }
 
 .media-placeholder {
@@ -141,14 +141,13 @@ iframe { border: 0; }
 .media-placeholder__label { font-size: .8rem; font-weight: 600; max-width: 220px; line-height: 1.4; }
 .media-placeholder--video { color: var(--teeoff-secondary-dark); background: rgba(18,31,75,.85); border-color: rgba(255,185,32,.4); }
 .media-placeholder--video .media-placeholder__label { color: #fff; }
-.media-placeholder--compact { padding: 0; gap: 0; border: none; background: var(--teeoff-bg-alt); border-radius: var(--radius-sm); width: 120px; }
-.media-placeholder--compact .media-placeholder__icon svg { width: 18px; height: 18px; }
+.media-placeholder--compact { padding: 0; gap: 0; border: none; background: var(--teeoff-bg-alt); border-radius: var(--radius-sm); width: 160px; }
+.media-placeholder--compact .media-placeholder__icon svg { width: 28px; height: 28px; }
 .media-placeholder--compact .media-placeholder__label { display: none; }
 
 .empty-state .section-heading { margin: 0 auto 24px; text-align: center; }
-.partners-logos-minimal { display: flex; align-items: flex-start; justify-content: center; gap: 32px; flex-wrap: wrap; margin: 0 auto; }
-.partners-logos-minimal__item { width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: .7; filter: grayscale(1); }
-.partners-logos-minimal__item:hover { opacity: 1; filter: none; }
+.partners-logos-minimal { display: flex; align-items: flex-start; justify-content: center; gap: 48px; flex-wrap: wrap; margin: 0 auto; }
+.partners-logos-minimal__item { width: 160px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .partners-logos-minimal__name { font-size: .78rem; font-weight: 600; color: var(--teeoff-body); }
 
 /* -------------------------------------------------------- Header -- */
@@ -275,6 +274,8 @@ iframe { border: 0; }
 }
 
 /* -------------------------------------------------------- Partners -- */
+
+.page-template-page-partenaires .partners { background: var(--teeoff-bg-alt); }
 
 .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
 .partner-card {
