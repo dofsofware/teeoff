@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<noscript><style>.hero__title,.hero__subtitle,.hero__actions .btn,.page-hero .eyebrow,.page-hero h1,.page-hero__lead{opacity:1!important;}</style></noscript>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

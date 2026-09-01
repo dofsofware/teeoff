@@ -39,7 +39,10 @@ add_action( 'after_setup_theme', 'teeoff_setup' );
 function teeoff_scripts() {
 	wp_enqueue_style( 'teeoff-google-fonts', 'https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap', array(), null );
 	wp_enqueue_style( 'teeoff-main', TEEOFF_URI . '/assets/css/main.css', array(), TEEOFF_VERSION );
-	wp_enqueue_script( 'teeoff-main', TEEOFF_URI . '/assets/js/main.js', array(), TEEOFF_VERSION, true );
+
+	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true );
+	wp_enqueue_script( 'gsap-scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array( 'gsap' ), '3.12.5', true );
+	wp_enqueue_script( 'teeoff-main', TEEOFF_URI . '/assets/js/main.js', array( 'gsap', 'gsap-scrolltrigger' ), TEEOFF_VERSION, true );
 
 	if ( is_singular() && comments_open() ) {
 		wp_enqueue_script( 'comment-reply' );
