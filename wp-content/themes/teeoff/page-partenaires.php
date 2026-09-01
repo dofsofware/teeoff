@@ -1,4 +1,8 @@
-<?php defined( 'ABSPATH' ) || exit; get_header();
+<?php
+/**
+ * Template Name: Partenaires
+ */
+defined( 'ABSPATH' ) || exit; get_header();
 
 $teeoff_page_id = get_the_ID();
 ?>

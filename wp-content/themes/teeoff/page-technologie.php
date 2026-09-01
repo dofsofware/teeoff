@@ -1,4 +1,8 @@
-<?php defined( 'ABSPATH' ) || exit; get_header();
+<?php
+/**
+ * Template Name: Technologie
+ */
+defined( 'ABSPATH' ) || exit; get_header();
 
 $teeoff_page_id = get_the_ID();
 ?>
@@ -42,7 +46,14 @@ $teeoff_page_id = get_the_ID();
 				?>
 				<div class="tech-card">
 					<div class="tech-card__media">
-						<?php teeoff_media_image( array( 'ref' => $ref, 'label' => sprintf( __( 'Illustration %1$s (prompt %2$s)', 'teeoff' ), $item[0], $ref ? $ref : '?' ), 'ratio' => 'ratio-1-1' ) ); ?>
+						<?php
+						teeoff_page_media_image( $teeoff_page_id, 'tech_item_image_' . ( $i + 1 ), array(
+							'ratio' => 'ratio-1-1',
+							'alt'   => $item[0],
+							'ref'   => $ref,
+							'label' => sprintf( __( 'Illustration %1$s (prompt %2$s)', 'teeoff' ), $item[0], $ref ? $ref : '?' ),
+						) );
+						?>
 					</div>
 					<h3><?php echo esc_html( $item[0] ); ?></h3>
 					<p><?php echo esc_html( $item[1] ); ?></p>

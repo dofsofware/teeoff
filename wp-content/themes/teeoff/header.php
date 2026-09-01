@@ -14,11 +14,13 @@
 
 <header class="site-header" id="site-header">
 	<div class="container site-header__inner">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
-			<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
+		<?php if ( has_custom_logo() ) : ?>
+			<div class="site-logo"><?php the_custom_logo(); ?></div>
+		<?php else : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
 				<span class="site-logo__text"><?php bloginfo( 'name' ); ?></span>
-			<?php endif; ?>
-		</a>
+			</a>
+		<?php endif; ?>
 
 		<nav class="main-nav" aria-label="<?php esc_attr_e( 'Menu principal', 'teeoff' ); ?>">
 			<?php

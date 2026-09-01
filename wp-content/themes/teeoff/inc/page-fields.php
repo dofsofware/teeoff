@@ -37,6 +37,12 @@ function teeoff_page_content_meta_box_html( $post ) {
 	wp_nonce_field( 'teeoff_page_content', 'teeoff_page_content_nonce' );
 
 	$template = get_page_template_slug( $post->ID );
+	if ( ! $template && $post->post_name ) {
+		$slug_template = 'page-' . $post->post_name . '.php';
+		if ( file_exists( TEEOFF_DIR . '/' . $slug_template ) ) {
+			$template = $slug_template;
+		}
+	}
 	$is_front = ( (int) get_option( 'page_on_front' ) === $post->ID );
 
 	if ( $is_front ) {
@@ -108,6 +114,9 @@ function teeoff_page_content_meta_box_html( $post ) {
 		echo '<h4>' . esc_html__( 'Bloc technologies (5 elements)', 'teeoff' ) . '</h4>';
 		echo '<p class="description">' . esc_html__( 'Un element par ligne : Titre | Description', 'teeoff' ) . '</p>';
 		teeoff_render_field( $post->ID, 'technology_items', __( 'Elements', 'teeoff' ), 'textarea', 8 );
+		for ( $i = 1; $i <= 5; $i++ ) {
+			teeoff_render_image_field( $post->ID, 'tech_item_image_' . $i, sprintf( __( 'Image element %d', 'teeoff' ), $i ) );
+		}
 	}
 
 	if ( 'page-partenaires.php' === $template ) {
@@ -185,7 +194,7 @@ function teeoff_save_page_content_meta( $post_id ) {
 
 	$text_fields = array( 'hero_title', 'mission_title', 'technology_title', 'vision_title' );
 	$area_fields = array( 'hero_subtitle', 'mission_text', 'technology_items', 'hero_lead', 'about_mission_text' );
-	$image_fields = array( 'hero_image', 'mission_image', 'technology_poster', 'hero_bg_image', 'about_team_image', 'about_vision_image', 'partnership_image', 'contact_image' );
+	$image_fields = array( 'hero_image', 'mission_image', 'technology_poster', 'hero_bg_image', 'about_team_image', 'about_vision_image', 'partnership_image', 'contact_image', 'tech_item_image_1', 'tech_item_image_2', 'tech_item_image_3', 'tech_item_image_4', 'tech_item_image_5' );
 
 	foreach ( $text_fields as $key ) {
 		$field = 'teeoff_' . $key;
