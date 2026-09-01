@@ -15,22 +15,6 @@ $teeoff_page_id = get_the_ID();
 	</div>
 </section>
 
-<section class="section partners">
-	<div class="container">
-		<?php
-		$partners = get_posts( array( 'post_type' => 'partenaire', 'numberposts' => -1, 'post_status' => 'publish' ) );
-		if ( $partners ) :
-			get_template_part( 'template-parts/content', 'partners-grid', array( 'number' => -1 ) );
-		else :
-			?>
-			<div class="empty-state">
-				<?php teeoff_media_image( array( 'ref' => '8.2', 'label' => __( 'Illustration Partenariat (prompt 8.2)', 'teeoff' ), 'ratio' => 'ratio-1-1', 'class' => 'empty-state__media' ) ); ?>
-				<p><?php esc_html_e( 'Nos partenariats seront bientot presentes ici.', 'teeoff' ); ?></p>
-			</div>
-		<?php endif; wp_reset_postdata(); ?>
-	</div>
-</section>
-
 <section class="section partnership-cta">
 	<div class="container partnership-cta__grid">
 		<div class="partnership-cta__media">
@@ -49,6 +33,38 @@ $teeoff_page_id = get_the_ID();
 			<p><?php esc_html_e( 'Entreprises technologiques, operateurs telecoms, etablissements de sante ou d\'education, organisations religieuses ou culturelles : proposez un partenariat a TeeOff Technologies.', 'teeoff' ); ?></p>
 			<?php get_template_part( 'template-parts/form', 'partnership' ); ?>
 		</div>
+	</div>
+</section>
+
+<section class="section partners">
+	<div class="container">
+		<?php
+		$partners = get_posts( array( 'post_type' => 'partenaire', 'numberposts' => -1, 'post_status' => 'publish' ) );
+		if ( $partners ) :
+			get_template_part( 'template-parts/content', 'partners-grid', array( 'number' => -1 ) );
+		else :
+			?>
+			<div class="empty-state">
+				<div class="section-heading">
+					<h2><?php echo esc_html( teeoff_field( $teeoff_page_id, 'partners_empty_title', 'Nos partenariats' ) ); ?></h2>
+				</div>
+				<div class="partners-logos-minimal">
+					<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
+						<div class="partners-logos-minimal__item">
+							<?php
+							teeoff_page_media_image( $teeoff_page_id, 'partners_empty_logo_' . $i, array(
+								'ratio' => 'ratio-logo',
+								'class' => 'media-placeholder--compact',
+								'ref'   => '8.2',
+								'label' => sprintf( __( 'Logo partenaire %d (prompt 8.2)', 'teeoff' ), $i ),
+							) );
+							?>
+							<span class="partners-logos-minimal__name"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'partners_empty_logo_name_' . $i, sprintf( __( 'Partenaire %d', 'teeoff' ), $i ) ) ); ?></span>
+						</div>
+					<?php endfor; ?>
+				</div>
+			</div>
+		<?php endif; wp_reset_postdata(); ?>
 	</div>
 </section>
 

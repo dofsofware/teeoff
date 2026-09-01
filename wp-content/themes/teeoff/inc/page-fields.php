@@ -122,6 +122,14 @@ function teeoff_page_content_meta_box_html( $post ) {
 	if ( 'page-partenaires.php' === $template ) {
 		echo '<h4>' . esc_html__( 'Devenir partenaire', 'teeoff' ) . '</h4>';
 		teeoff_render_image_field( $post->ID, 'partnership_image', __( 'Image', 'teeoff' ) );
+
+		echo '<h4>' . esc_html__( 'Aucun partenaire publie (3 logos par defaut)', 'teeoff' ) . '</h4>';
+		echo '<p class="description">' . esc_html__( "Affiches uniquement tant qu'aucune fiche Partenaire n'est publiee.", 'teeoff' ) . '</p>';
+		teeoff_render_field( $post->ID, 'partners_empty_title', __( 'Titre de la section', 'teeoff' ) );
+		for ( $i = 1; $i <= 3; $i++ ) {
+			teeoff_render_image_field( $post->ID, 'partners_empty_logo_' . $i, sprintf( __( 'Logo %d', 'teeoff' ), $i ) );
+			teeoff_render_field( $post->ID, 'partners_empty_logo_name_' . $i, sprintf( __( 'Nom du logo %d', 'teeoff' ), $i ) );
+		}
 	}
 
 	if ( 'page-contact.php' === $template ) {
@@ -192,9 +200,9 @@ function teeoff_save_page_content_meta( $post_id ) {
 		return;
 	}
 
-	$text_fields = array( 'hero_title', 'mission_title', 'technology_title', 'vision_title' );
+	$text_fields = array( 'hero_title', 'mission_title', 'technology_title', 'vision_title', 'partners_empty_title', 'partners_empty_logo_name_1', 'partners_empty_logo_name_2', 'partners_empty_logo_name_3' );
 	$area_fields = array( 'hero_subtitle', 'mission_text', 'technology_items', 'hero_lead', 'about_mission_text' );
-	$image_fields = array( 'hero_image', 'mission_image', 'technology_poster', 'hero_bg_image', 'about_team_image', 'about_vision_image', 'partnership_image', 'contact_image', 'tech_item_image_1', 'tech_item_image_2', 'tech_item_image_3', 'tech_item_image_4', 'tech_item_image_5' );
+	$image_fields = array( 'hero_image', 'mission_image', 'technology_poster', 'hero_bg_image', 'about_team_image', 'about_vision_image', 'partnership_image', 'contact_image', 'tech_item_image_1', 'tech_item_image_2', 'tech_item_image_3', 'tech_item_image_4', 'tech_item_image_5', 'partners_empty_logo_1', 'partners_empty_logo_2', 'partners_empty_logo_3' );
 
 	foreach ( $text_fields as $key ) {
 		$field = 'teeoff_' . $key;
