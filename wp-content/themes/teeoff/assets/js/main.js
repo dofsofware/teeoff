@@ -75,15 +75,19 @@
 				} );
 			}
 
-			/* Subtle parallax drift on the hero media */
-			var heroMedia = document.querySelector( '.hero__media' );
-			if ( heroMedia ) {
-				gsap.to( heroMedia, {
-					yPercent: 12,
+			/* Subtle parallax drift on every full-bleed background image */
+			var parallaxMedia = document.querySelectorAll(
+				'.hero__media, .page-hero__media, .technology__media, .about-vision__media'
+			);
+			parallaxMedia.forEach( function ( media ) {
+				var section = media.closest( 'section' );
+				if ( ! section ) { return; }
+				gsap.to( media, {
+					yPercent: 20,
 					ease: 'none',
-					scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+					scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: true }
 				} );
-			}
+			} );
 
 			/* Header shadow once the page has scrolled */
 			if ( header ) {
