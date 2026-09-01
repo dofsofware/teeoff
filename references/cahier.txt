@@ -1,0 +1,716 @@
+CAHIER DES CHARGES — SITE WEB TEEOFF TECHNOLOGIES SN
+1. Présentation du projet
+1.1 Nom du projet
+
+Création du site web institutionnel de TeeOff Technologies SN sous WordPress.
+
+1.2 Présentation de l'entreprise
+
+TeeOff Technologies conçoit des services à valeur ajoutée (VAS) destinés à rapprocher les populations urbaines et rurales des services essentiels du quotidien.
+
+L'entreprise s'appuie principalement sur les technologies vocales et les réseaux téléphoniques afin de rendre ses services accessibles au plus grand nombre, y compris aux personnes ne disposant pas de smartphone ou de connexion Internet.
+
+Les principaux domaines d'intervention sont :
+
+Santé
+Éducation
+Guides pratiques
+Religion et culture
+1.3 Vision
+
+Rendre l'essentiel accessible à tous, partout.
+
+1.4 Mission
+
+Utiliser les technologies vocales et les télécommunications pour faciliter l'accès aux services essentiels, en tenant compte des réalités locales, de la diversité linguistique et des contraintes liées à l'accès à Internet.
+
+2. Objectifs du site
+
+Le site WordPress devra principalement permettre de :
+
+Présenter TeeOff Technologies et ses activités.
+Expliquer clairement son concept et sa proposition de valeur.
+Présenter les différents services proposés.
+Mettre en avant les technologies utilisées.
+Présenter les partenaires et collaborations.
+Permettre aux visiteurs de contacter TeeOff.
+Présenter les actualités et réalisations de l'entreprise.
+Faciliter les demandes de partenariat.
+Renforcer la crédibilité et la visibilité de TeeOff Technologies.
+Servir de vitrine institutionnelle auprès des clients, partenaires, investisseurs et institutions.
+
+Le site devra être professionnel, moderne, responsive et facilement administrable.
+
+3. Public cible
+
+Le site devra s'adresser notamment à :
+
+Particuliers et utilisateurs
+
+Personnes souhaitant découvrir ou utiliser les services de TeeOff.
+
+Entreprises
+
+Entreprises intéressées par les solutions VAS et les services proposés par TeeOff.
+
+Institutions
+Ministères
+Administrations
+Organisations publiques
+Collectivités territoriales
+Organismes sociaux
+Partenaires
+
+Entreprises technologiques, opérateurs télécoms, établissements de santé, établissements éducatifs, organisations religieuses et culturelles, etc.
+
+Investisseurs
+
+Personnes ou organisations souhaitant comprendre le modèle économique, la vision et le potentiel de TeeOff Technologies.
+
+Médias
+
+Journalistes et organismes souhaitant obtenir des informations sur l'entreprise.
+
+4. Arborescence du site
+
+Le site pourrait être organisé autour des pages suivantes :
+
+1. Accueil
+2. À propos
+Qui sommes-nous ?
+Notre vision
+Notre mission
+Nos valeurs
+Notre approche
+3. Nos solutions
+Santé
+Éducation
+Guides pratiques
+Religion & Culture
+4. Technologie
+Technologie vocale
+Accessibilité sans Internet
+Intelligence artificielle
+Multilinguisme
+Architecture / infrastructure
+5. Nos partenaires
+
+Présentation des partenaires et collaborations.
+
+6. Actualités / Blog
+
+Articles, annonces, événements, communiqués et actualités de TeeOff.
+
+7. Carrières
+
+Présentation des opportunités professionnelles éventuelles.
+
+8. Contact
+
+Formulaire de contact et coordonnées.
+
+5. Page d'accueil
+
+La page d'accueil sera la page la plus importante du site.
+
+Elle devra présenter rapidement TeeOff et permettre au visiteur de comprendre le projet en quelques secondes.
+
+Section Hero
+
+Le haut de la page devra contenir :
+
+Titre :
+
+« Rendre l'essentiel accessible à tous, partout. »
+
+Sous-titre :
+
+Une courte présentation expliquant que TeeOff utilise les technologies vocales pour rapprocher les populations des services essentiels, même sans smartphone ni connexion Internet.
+
+Boutons d'action :
+
+Découvrir nos solutions
+Nous contacter
+
+Une illustration ou une image représentant une personne utilisant un téléphone pourra accompagner cette section.
+
+Section « Notre mission »
+
+Courte présentation de la mission de TeeOff.
+
+Exemple :
+
+« TeeOff Technologies développe des services à valeur ajoutée accessibles par téléphone afin de rapprocher les populations des services essentiels du quotidien. »
+
+Un bouton :
+
+En savoir plus
+
+renverra vers la page « À propos ».
+
+6. Section « Nos solutions »
+
+Présenter les quatre principaux domaines sous forme de cartes.
+
+Santé
+
+Accéder à des services de santé et à la téléconsultation grâce aux technologies vocales.
+
+Éducation
+
+Accéder à des contenus pédagogiques et d'apprentissage par la voix.
+
+Guides pratiques
+
+Accéder à des informations utiles concernant l'agriculture, les droits, les démarches administratives et la prévention.
+
+Religion & Culture
+
+Accéder à des contenus religieux et culturels dans les langues locales.
+
+Chaque carte pourra contenir :
+
+une icône ;
+une image ;
+une courte description ;
+un bouton « Découvrir ».
+7. Section « Pourquoi TeeOff ? »
+
+Cette section devra mettre en avant les avantages de la solution.
+
+Accessible
+
+Services accessibles depuis un téléphone classique.
+
+Sans Internet
+
+Les utilisateurs n'ont pas nécessairement besoin d'une connexion Internet.
+
+Multilingue
+
+Les services peuvent être proposés dans plusieurs langues locales.
+
+Accessible partout
+
+Possibilité de toucher aussi bien les populations urbaines que rurales.
+
+Simple
+
+L'utilisation repose sur une interface vocale intuitive.
+
+8. Section « Comment ça fonctionne ? »
+
+Présenter le fonctionnement sous forme de trois ou quatre étapes.
+
+Étape 1
+
+L'utilisateur appelle un numéro.
+
+Étape 2
+
+Il choisit le service souhaité.
+
+Étape 3
+
+Il interagit avec le système vocal dans sa langue.
+
+Étape 4
+
+Il accède au service ou à l'information recherchée.
+
+Cette section devra être très visuelle.
+
+9. Section « Notre technologie »
+
+Présenter les technologies utilisées par TeeOff.
+
+Les éléments à mettre en avant pourront notamment être :
+
+Interfaces vocales
+Téléphonie
+Intelligence artificielle
+Traitement de la voix
+Multilinguisme
+Services accessibles sans Internet
+
+Cette section devra rester compréhensible pour un public non technique.
+
+10. Section « Nos partenaires »
+
+Cette section permettra d'afficher les partenaires de TeeOff.
+
+Pour chaque partenaire :
+
+Logo
+Nom
+Description courte
+Type de partenariat
+Lien vers le site du partenaire, si nécessaire
+
+Le partenariat avec MedBrain pourra notamment être présenté dans la rubrique Santé, sous réserve de validation des informations officielles à publier.
+
+11. Section « Actualités »
+
+Le site devra intégrer un espace permettant à l'équipe TeeOff de publier régulièrement des articles.
+
+Les articles pourront concerner :
+
+Nouveaux services
+Nouveaux partenariats
+Événements
+Communiqués
+Innovations technologiques
+Actualités de l'entreprise
+Témoignages
+Projets réalisés
+
+Chaque article devra pouvoir comporter :
+
+titre ;
+image principale ;
+date ;
+auteur ;
+contenu ;
+catégorie ;
+partage sur les réseaux sociaux.
+12. Page « À propos »
+
+Cette page devra présenter TeeOff de manière plus détaillée.
+
+Elle pourra contenir :
+
+Qui sommes-nous ?
+
+Présentation de l'entreprise.
+
+Notre vision
+
+« Rendre l'essentiel accessible à tous, partout. »
+
+Notre mission
+
+Explication de l'objectif de TeeOff.
+
+Nos valeurs
+
+Par exemple :
+
+Accessibilité
+Inclusion
+Innovation
+Impact social
+Simplicité
+Proximité
+
+Ces valeurs devront être validées par TeeOff avant intégration définitive.
+
+13. Page « Nos solutions »
+
+Cette page présentera en détail les différents services.
+
+Pour chaque solution :
+
+Santé
+
+Présentation détaillée du service, fonctionnement, avantages et partenaires.
+
+Éducation
+
+Présentation des contenus et services pédagogiques.
+
+Guides pratiques
+
+Présentation des informations et services disponibles.
+
+Religion & Culture
+
+Présentation des contenus religieux et culturels.
+
+Chaque solution pourra disposer ultérieurement de sa propre page détaillée si le nombre de contenus devient important.
+
+14. Page « Technologie »
+
+Cette page devra expliquer la technologie de TeeOff de manière accessible.
+
+Elle pourra notamment expliquer :
+
+Interface vocale
+
+L'utilisateur interagit avec le service à travers la voix.
+
+Téléphonie
+
+Les services peuvent être accessibles depuis un téléphone classique.
+
+Intelligence artificielle
+
+L'IA peut être utilisée pour certains services, notamment dans le domaine de la santé.
+
+Multilinguisme
+
+Les solutions peuvent être adaptées aux langues locales.
+
+Accessibilité
+
+L'objectif est de fonctionner dans des environnements où l'accès à Internet est limité.
+
+15. Page « Contact »
+
+La page Contact devra contenir :
+
+Adresse ;
+Téléphone ;
+Email ;
+Adresse physique, si applicable ;
+Réseaux sociaux ;
+Carte Google Maps, si nécessaire.
+Formulaire
+
+Champs recommandés :
+
+Nom et prénom
+Entreprise / Organisation
+Email
+Téléphone
+Objet
+Message
+Consentement au traitement des données
+
+Bouton :
+
+Envoyer
+
+Le formulaire devra envoyer une notification à l'adresse email administrative de TeeOff.
+
+16. Demande de partenariat
+
+Il pourrait être intéressant d'avoir un formulaire spécifique :
+
+« Devenir partenaire »
+
+Champs :
+
+Nom
+Organisation
+Fonction
+Email
+Téléphone
+Type de partenariat
+Message
+Pièce jointe éventuellement
+
+Cela permettra à TeeOff de recevoir directement les propositions de partenariat.
+
+17. Page Carrières
+
+Cette page permettra de publier les opportunités professionnelles.
+
+Pour chaque offre :
+
+Intitulé du poste
+Description
+Missions
+Profil recherché
+Compétences
+Type de contrat
+Localisation
+Date limite
+
+Un bouton :
+
+Postuler
+
+pourra ouvrir un formulaire de candidature.
+
+Cette fonctionnalité peut être ajoutée ultérieurement si TeeOff n'a pas encore de recrutement à présenter.
+
+18. Fonctionnalités WordPress
+
+Le site devra être administrable depuis WordPress.
+
+L'administrateur devra pouvoir :
+
+modifier les textes ;
+modifier les images ;
+ajouter/supprimer des articles ;
+gérer les catégories ;
+gérer les partenaires ;
+gérer les pages ;
+gérer les menus ;
+gérer les formulaires ;
+gérer les utilisateurs WordPress.
+
+Il devra être possible de créer différents rôles, par exemple :
+
+Administrateur
+
+Gestion complète du site.
+
+Éditeur
+
+Gestion des contenus et articles.
+
+Auteur
+
+Création et gestion de ses propres articles.
+
+19. Design et identité visuelle
+
+Le site devra avoir une apparence :
+
+moderne ;
+professionnelle ;
+technologique ;
+accessible ;
+épurée ;
+adaptée à une entreprise africaine innovante.
+
+L'identité visuelle devra respecter la charte graphique de TeeOff si celle-ci existe.
+
+Les éléments à récupérer auprès de TeeOff :
+
+Logo ;
+Couleurs officielles ;
+Polices ;
+Charte graphique ;
+Images ;
+Photos ;
+Logos des partenaires.
+20. Responsive Design
+
+Le site devra être parfaitement adapté aux :
+
+ordinateurs ;
+tablettes ;
+smartphones.
+
+Une attention particulière devra être accordée à l'affichage mobile puisque les services de TeeOff ciblent notamment les utilisateurs de téléphones.
+
+21. Référencement naturel — SEO
+
+Le site devra être optimisé pour les moteurs de recherche.
+
+Prévoir notamment :
+
+URLs propres ;
+titres SEO ;
+meta descriptions ;
+balises H1/H2/H3 ;
+sitemap XML ;
+robots.txt ;
+optimisation des images ;
+données structurées lorsque pertinent ;
+compatibilité Google Search Console ;
+optimisation des performances.
+
+Des mots-clés pourront être définis autour de :
+
+TeeOff Technologies ;
+services vocaux ;
+services accessibles sans Internet ;
+VAS Afrique ;
+téléconsultation ;
+éducation par téléphone ;
+services numériques en Afrique ;
+langues locales.
+22. Sécurité
+
+Le site devra intégrer les bonnes pratiques de sécurité WordPress :
+
+HTTPS ;
+mots de passe sécurisés ;
+limitation des tentatives de connexion ;
+protection du formulaire ;
+CAPTCHA ou mécanisme anti-spam ;
+mises à jour régulières ;
+sauvegardes ;
+protection contre les injections et attaques courantes.
+
+Les extensions utilisées devront être limitées aux extensions réellement nécessaires.
+
+23. Performance
+
+Le site devra être optimisé pour offrir un chargement rapide.
+
+Prévoir notamment :
+
+compression des images ;
+WebP/AVIF lorsque possible ;
+cache ;
+minification des ressources ;
+lazy loading ;
+limitation des plugins ;
+optimisation de la base de données ;
+hébergement adapté.
+
+L'objectif est d'obtenir de bonnes performances même avec une connexion Internet relativement faible.
+
+24. Compatibilité
+
+Le site devra être compatible avec les principaux navigateurs :
+
+Google Chrome
+Microsoft Edge
+Firefox
+Safari
+
+et avec les versions modernes d'Android et iOS.
+
+25. Réseaux sociaux
+
+Le site devra pouvoir intégrer les liens vers les réseaux sociaux officiels de TeeOff.
+
+Selon les plateformes utilisées :
+
+LinkedIn
+Facebook
+Instagram
+YouTube
+X
+TikTok
+
+Les réseaux effectivement utilisés devront être confirmés par TeeOff.
+
+26. Analytics
+
+Le site pourra intégrer un outil d'analyse permettant de mesurer :
+
+nombre de visiteurs ;
+pages les plus consultées ;
+provenance des visiteurs ;
+appareils utilisés ;
+pays des visiteurs ;
+sources de trafic.
+
+Google Analytics ou une solution équivalente pourra être utilisée selon les choix de TeeOff.
+
+27. Mentions légales et protection des données
+
+Prévoir les pages :
+
+Mentions légales
+Politique de confidentialité
+Politique relative aux cookies, si nécessaire
+Conditions d'utilisation, si nécessaire
+
+Les textes juridiques devront être fournis ou validés par TeeOff.
+
+28. Hébergement et nom de domaine
+
+À définir avec TeeOff :
+
+Nom de domaine
+Hébergeur
+Type d'hébergement
+Adresse email professionnelle
+Certificat SSL
+Sauvegardes
+Environnement de production
+
+Il faudra également déterminer si le domaine et l'hébergement existent déjà.
+
+29. Contenus à fournir par TeeOff
+
+Avant le développement, TeeOff devra fournir :
+
+Logo officiel ;
+Charte graphique ;
+Présentation officielle de l'entreprise ;
+Textes des différentes pages ;
+Photos ;
+Vidéos ;
+Logos des partenaires ;
+Coordonnées ;
+Email professionnel ;
+Numéro de téléphone ;
+Réseaux sociaux ;
+Informations sur les services ;
+Informations techniques pouvant être publiées ;
+Mentions légales ;
+Politique de confidentialité.
+30. Points à clarifier avant le développement
+
+Plusieurs informations sont encore nécessaires pour finaliser le cahier des charges.
+
+Identité
+Quelle est la dénomination juridique exacte ?
+Quelle est l'adresse officielle ?
+Quel est le numéro de téléphone ?
+Quelle est l'adresse email officielle ?
+Quel est le site/domain actuel, s'il existe ?
+Services
+Quels services sont actuellement opérationnels ?
+Quels services sont encore en développement ?
+Quels sont les numéros à appeler ?
+Les services fonctionnent-ils via appel classique, USSD, SMS ou plusieurs canaux ?
+Quelles langues sont actuellement disponibles ?
+Partenaires
+Quels sont les partenaires officiels ?
+Quels logos peuvent être publiés ?
+Quelles informations peuvent être communiquées concernant chaque partenariat ?
+Santé
+
+C'est un point particulièrement important : il faudra préciser exactement ce que TeeOff peut actuellement proposer en matière de téléconsultation et d'IA médicale afin de ne pas présenter sur le site des fonctionnalités qui ne sont pas encore disponibles.
+
+Design
+Existe-t-il une charte graphique ?
+Quelles sont les couleurs officielles ?
+Le logo existe-t-il en format SVG/PNG ?
+Existe-t-il des photos professionnelles ?
+31. Technologies proposées
+
+Pour ce projet, une architecture WordPress classique devrait être suffisante :
+
+CMS : WordPress
+
+Thème : thème professionnel personnalisé ou thème léger adapté aux besoins
+
+Constructeur : Elementor, Gutenberg ou autre solution validée
+
+Formulaires : solution WordPress sécurisée
+
+SEO : extension SEO reconnue
+
+Sécurité : extension de sécurité adaptée
+
+Cache/performance : solution de cache adaptée à l'hébergement
+
+Le choix définitif des plugins devra être fait en fonction des besoins réels afin d'éviter de surcharger WordPress.
+
+32. Livrables
+
+À la fin du projet, le prestataire devra fournir :
+
+Site WordPress fonctionnel.
+Design responsive.
+Pages institutionnelles.
+Pages des solutions.
+Système de gestion des actualités.
+Formulaire de contact.
+Formulaire de partenariat.
+Configuration SEO de base.
+Configuration de sécurité.
+Configuration des sauvegardes.
+Connexion aux outils Analytics si retenus.
+Documentation d'administration.
+Accès administrateur remis à TeeOff.
+Formation de base à l'utilisation de WordPress.
+33. Structure finale recommandée
+
+Je recommande finalement cette structure de menu principal :
+
+ACCUEIL | À PROPOS | NOS SOLUTIONS | TECHNOLOGIE | PARTENAIRES | ACTUALITÉS | CONTACT
+
+Avec éventuellement :
+
+CARRIÈRES
+
+dans le menu ou dans le pied de page.
+
+Le message central du site pourrait être :
+
+« Un appel. Un service. Un impact. »
+
+avec comme slogan principal :
+
+« Rendre l'essentiel accessible à tous, partout. »
