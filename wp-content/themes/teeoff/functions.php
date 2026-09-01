@@ -1,7 +1,7 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 
-define( 'TEEOFF_VERSION', '1.0.2' );
+define( 'TEEOFF_VERSION', '1.0.3' );
 define( 'TEEOFF_DIR', get_template_directory() );
 define( 'TEEOFF_URI', get_template_directory_uri() );
 
