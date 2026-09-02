@@ -2,10 +2,10 @@
 defined( 'ABSPATH' ) || exit;
 
 $items = array(
-	'accessible'         => array( __( 'Accessible', 'teeoff' ), __( 'Services accessibles depuis un telephone classique, sans application ni smartphone requis.', 'teeoff' ) ),
-	'sans-internet'      => array( __( 'Sans Internet', 'teeoff' ), __( "Les utilisateurs n'ont pas necessairement besoin d'une connexion Internet pour acceder aux services.", 'teeoff' ) ),
-	'multilingue'        => array( __( 'Multilingue', 'teeoff' ), __( 'Les services peuvent etre proposes dans plusieurs langues locales.', 'teeoff' ) ),
-	'accessible-partout' => array( __( 'Accessible partout', 'teeoff' ), __( 'Possibilite de toucher aussi bien les populations urbaines que rurales.', 'teeoff' ) ),
+	'accessible'         => array( __( 'Accessible', 'teeoff' ), __( 'Services accessibles depuis un téléphone classique, sans application ni smartphone requis.', 'teeoff' ) ),
+	'sans-internet'      => array( __( 'Sans Internet', 'teeoff' ), __( "Les utilisateurs n'ont pas nécessairement besoin d'une connexion Internet pour accéder aux services.", 'teeoff' ) ),
+	'multilingue'        => array( __( 'Multilingue', 'teeoff' ), __( 'Les services peuvent être proposés dans plusieurs langues locales.', 'teeoff' ) ),
+	'accessible-partout' => array( __( 'Accessible partout', 'teeoff' ), __( 'Possibilité de toucher aussi bien les populations urbaines que rurales.', 'teeoff' ) ),
 	'simple'             => array( __( 'Simple', 'teeoff' ), __( "L'utilisation repose sur une interface vocale intuitive, sans courbe d'apprentissage.", 'teeoff' ) ),
 );
 ?>

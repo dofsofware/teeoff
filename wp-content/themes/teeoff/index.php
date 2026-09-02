@@ -2,9 +2,9 @@
 
 <section class="page-hero page-hero--compact">
 	<div class="container">
-		<span class="eyebrow"><?php esc_html_e( 'Actualites', 'teeoff' ); ?></span>
-		<h1><?php echo ( is_home() && ! is_front_page() ) ? esc_html__( 'Actualites & realisations', 'teeoff' ) : esc_html( get_the_archive_title() ); ?></h1>
-		<p class="page-hero__lead"><?php esc_html_e( 'Nouveaux services, partenariats, evenements et innovations : suivez l\'actualite de TeeOff Technologies.', 'teeoff' ); ?></p>
+		<span class="eyebrow"><?php esc_html_e( 'Actualités', 'teeoff' ); ?></span>
+		<h1><?php echo ( is_home() && ! is_front_page() ) ? esc_html__( 'Actualités & réalisations', 'teeoff' ) : esc_html( get_the_archive_title() ); ?></h1>
+		<p class="page-hero__lead"><?php esc_html_e( 'Nouveaux services, partenariats, événements et innovations : suivez l\'actualité de TeeOff Technologies SN.', 'teeoff' ); ?></p>
 	</div>
 </section>
 
@@ -30,10 +30,10 @@
 				<?php endwhile; ?>
 			</div>
 			<div class="pagination">
-				<?php the_posts_pagination( array( 'prev_text' => __( '&larr; Precedent', 'teeoff' ), 'next_text' => __( 'Suivant &rarr;', 'teeoff' ) ) ); ?>
+				<?php the_posts_pagination( array( 'prev_text' => __( '&larr; Précédent', 'teeoff' ), 'next_text' => __( 'Suivant &rarr;', 'teeoff' ) ) ); ?>
 			</div>
 		<?php else : ?>
-			<div class="empty-state"><p><?php esc_html_e( 'Aucun article publie pour le moment.', 'teeoff' ); ?></p></div>
+			<div class="empty-state"><p><?php esc_html_e( 'Aucun article publié pour le moment.', 'teeoff' ); ?></p></div>
 		<?php endif; ?>
 	</div>
 </section>

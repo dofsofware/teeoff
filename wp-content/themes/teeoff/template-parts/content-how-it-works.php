@@ -2,10 +2,10 @@
 defined( 'ABSPATH' ) || exit;
 
 $steps = array(
-	array( __( 'L\'utilisateur appelle un numero', 'teeoff' ), __( "Un simple appel telephonique, depuis n'importe quel type de telephone.", 'teeoff' ) ),
-	array( __( 'Il choisit le service souhaite', 'teeoff' ), __( 'Un menu vocal simple guide l\'utilisateur vers le service recherche.', 'teeoff' ) ),
-	array( __( 'Il interagit avec le systeme vocal dans sa langue', 'teeoff' ), __( "L'interface vocale comprend et repond dans la langue locale de l'utilisateur.", 'teeoff' ) ),
-	array( __( "Il accede au service ou a l'information recherchee", 'teeoff' ), __( "L'utilisateur obtient une reponse claire, utile et immediate.", 'teeoff' ) ),
+	array( __( 'L\'utilisateur appelle un numéro', 'teeoff' ), __( "Un simple appel téléphonique, depuis n'importe quel type de téléphone.", 'teeoff' ) ),
+	array( __( 'Il choisit le service souhaité', 'teeoff' ), __( 'Un menu vocal simple guide l\'utilisateur vers le service recherché.', 'teeoff' ) ),
+	array( __( 'Il interagit avec le système vocal dans sa langue', 'teeoff' ), __( "L'interface vocale comprend et répond dans la langue locale de l'utilisateur.", 'teeoff' ) ),
+	array( __( "Il accède au service ou à l'information recherchée", 'teeoff' ), __( "L'utilisateur obtient une réponse claire, utile et immédiate.", 'teeoff' ) ),
 );
 ?>
 <div class="steps-grid">

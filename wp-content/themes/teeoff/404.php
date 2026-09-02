@@ -12,7 +12,7 @@
 		?>
 		<h1><?php esc_html_e( 'Page introuvable', 'teeoff' ); ?></h1>
 		<p><?php esc_html_e( "La page que vous recherchez n'existe pas ou plus.", 'teeoff' ); ?></p>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn--primary"><?php esc_html_e( "Retour a l'accueil", 'teeoff' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn--primary"><?php esc_html_e( "Retour à l'accueil", 'teeoff' ); ?></a>
 	</div>
 </section>
 

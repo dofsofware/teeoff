@@ -60,7 +60,7 @@ add_filter( 'body_class', 'teeoff_body_classes' );
 
 /**
  * Prints the social network links configured in the Customizer
- * (Apparence > Personnaliser > Coordonnees).
+ * (Apparence > Personnaliser > Coordonnées).
  */
 function teeoff_social_links() {
 	$networks = array(

@@ -31,7 +31,7 @@ $solutions = get_posts( array(
 			<div class="solution-card__body">
 				<h3><?php the_title(); ?></h3>
 				<p><?php echo esc_html( $subtitle ? $subtitle : wp_trim_words( get_the_excerpt(), 18 ) ); ?></p>
-				<a href="<?php the_permalink(); ?>" class="link-arrow"><?php esc_html_e( 'Decouvrir', 'teeoff' ); ?></a>
+				<a href="<?php the_permalink(); ?>" class="link-arrow"><?php esc_html_e( 'Découvrir', 'teeoff' ); ?></a>
 			</div>
 		</article>
 	<?php endforeach; wp_reset_postdata(); ?>

@@ -51,12 +51,12 @@ function teeoff_page_content_meta_box_html( $post ) {
 		teeoff_render_field( $post->ID, 'hero_title', __( 'Titre', 'teeoff' ) );
 		teeoff_render_field( $post->ID, 'hero_subtitle', __( 'Sous-titre', 'teeoff' ), 'textarea' );
 
-		echo '<h4>' . esc_html__( 'Nos solutions (Sante, Education...)', 'teeoff' ) . '</h4>';
+		echo '<h4>' . esc_html__( 'Nos solutions (Santé, Éducation...)', 'teeoff' ) . '</h4>';
 		printf(
 			'<div class="teeoff-image-hint">%s<br><a href="%s">%s</a></div>',
 			esc_html__( "Les 4 cartes de cette section ne se modifient pas ici : chacune est une fiche a part.", 'teeoff' ),
 			esc_url( admin_url( 'edit.php?post_type=solution' ) ),
-			esc_html__( 'Ouvrir Solutions -> cliquer une fiche -> Definir l\'image mise en avant', 'teeoff' )
+			esc_html__( 'Ouvrir Solutions -> cliquer une fiche -> Définir l\'image mise en avant', 'teeoff' )
 		);
 
 		echo '<h4>' . esc_html__( 'Notre mission', 'teeoff' ) . '</h4>';
@@ -67,7 +67,7 @@ function teeoff_page_content_meta_box_html( $post ) {
 		echo '<h4>' . esc_html__( 'Notre technologie', 'teeoff' ) . '</h4>';
 		teeoff_render_image_field( $post->ID, 'technology_poster', __( 'Image / photo de fond', 'teeoff' ) );
 		teeoff_render_field( $post->ID, 'technology_title', __( 'Titre', 'teeoff' ) );
-		teeoff_render_field( $post->ID, 'technology_items', __( 'Liste (un element par ligne)', 'teeoff' ), 'textarea' );
+		teeoff_render_field( $post->ID, 'technology_items', __( 'Liste (un élément par ligne)', 'teeoff' ), 'textarea' );
 		return;
 	}
 
@@ -90,19 +90,19 @@ function teeoff_page_content_meta_box_html( $post ) {
 	}
 
 	if ( 'page-nos-solutions.php' === $template ) {
-		echo '<h4>' . esc_html__( 'Cartes Sante / Education / ...', 'teeoff' ) . '</h4>';
+		echo '<h4>' . esc_html__( 'Cartes Santé / Éducation / ...', 'teeoff' ) . '</h4>';
 		printf(
 			'<div class="teeoff-image-hint">%s<br><a href="%s">%s</a></div>',
 			esc_html__( 'Les images des cartes ne se modifient pas ici : chaque solution est une fiche a part.', 'teeoff' ),
 			esc_url( admin_url( 'edit.php?post_type=solution' ) ),
-			esc_html__( 'Ouvrir Solutions -> cliquer une fiche -> Definir l\'image mise en avant', 'teeoff' )
+			esc_html__( 'Ouvrir Solutions -> cliquer une fiche -> Définir l\'image mise en avant', 'teeoff' )
 		);
 	}
 
 	if ( 'page-a-propos.php' === $template ) {
-		echo '<h4>' . esc_html__( 'Equipe', 'teeoff' ) . '</h4>';
+		echo '<h4>' . esc_html__( 'Équipe', 'teeoff' ) . '</h4>';
 		teeoff_render_image_field( $post->ID, 'about_team_image', __( 'Photo', 'teeoff' ) );
-		echo '<p class="description">' . esc_html__( 'Le texte de cette section est le contenu principal de la page (editeur ci-dessus).', 'teeoff' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'Le texte de cette section est le contenu principal de la page (éditeur ci-dessus).', 'teeoff' ) . '</p>';
 
 		echo '<h4>' . esc_html__( 'Vision & Mission', 'teeoff' ) . '</h4>';
 		teeoff_render_image_field( $post->ID, 'about_vision_image', __( 'Image / photo de fond', 'teeoff' ) );
@@ -111,11 +111,11 @@ function teeoff_page_content_meta_box_html( $post ) {
 	}
 
 	if ( 'page-technologie.php' === $template ) {
-		echo '<h4>' . esc_html__( 'Bloc technologies (5 elements)', 'teeoff' ) . '</h4>';
-		echo '<p class="description">' . esc_html__( 'Un element par ligne : Titre | Description', 'teeoff' ) . '</p>';
+		echo '<h4>' . esc_html__( 'Bloc technologies (5 éléments)', 'teeoff' ) . '</h4>';
+		echo '<p class="description">' . esc_html__( 'Un élément par ligne : Titre | Description', 'teeoff' ) . '</p>';
 		teeoff_render_field( $post->ID, 'technology_items', __( 'Elements', 'teeoff' ), 'textarea', 8 );
 		for ( $i = 1; $i <= 5; $i++ ) {
-			teeoff_render_image_field( $post->ID, 'tech_item_image_' . $i, sprintf( __( 'Image element %d', 'teeoff' ), $i ) );
+			teeoff_render_image_field( $post->ID, 'tech_item_image_' . $i, sprintf( __( 'Image élément %d', 'teeoff' ), $i ) );
 		}
 	}
 
@@ -123,8 +123,8 @@ function teeoff_page_content_meta_box_html( $post ) {
 		echo '<h4>' . esc_html__( 'Devenir partenaire', 'teeoff' ) . '</h4>';
 		teeoff_render_image_field( $post->ID, 'partnership_image', __( 'Image', 'teeoff' ) );
 
-		echo '<h4>' . esc_html__( 'Aucun partenaire publie (3 logos par defaut)', 'teeoff' ) . '</h4>';
-		echo '<p class="description">' . esc_html__( "Affiches uniquement tant qu'aucune fiche Partenaire n'est publiee.", 'teeoff' ) . '</p>';
+		echo '<h4>' . esc_html__( 'Aucun partenaire publié (3 logos par défaut)', 'teeoff' ) . '</h4>';
+		echo '<p class="description">' . esc_html__( "Affichés uniquement tant qu'aucune fiche Partenaire n'est publiée.", 'teeoff' ) . '</p>';
 		teeoff_render_field( $post->ID, 'partners_empty_title', __( 'Titre de la section', 'teeoff' ) );
 		for ( $i = 1; $i <= 3; $i++ ) {
 			teeoff_render_image_field( $post->ID, 'partners_empty_logo_' . $i, sprintf( __( 'Logo %d', 'teeoff' ), $i ) );
@@ -183,7 +183,7 @@ function teeoff_render_image_field( $post_id, $key, $label, $use_featured_fallba
 			<button type="button" class="button teeoff-image-field__remove" style="<?php echo $display_id ? '' : 'display:none;'; ?>"><?php esc_html_e( 'Retirer', 'teeoff' ); ?></button>
 		</p>
 		<?php if ( $fallback_id && ! $attach_id ) : ?>
-			<p class="description"><?php esc_html_e( "Image mise en avant de la page utilisee par defaut. Choisissez une image ici pour la remplacer.", 'teeoff' ); ?></p>
+			<p class="description"><?php esc_html_e( "Image mise en avant de la page utilisée par défaut. Choisissez une image ici pour la remplacer.", 'teeoff' ); ?></p>
 		<?php endif; ?>
 	</div>
 	<?php

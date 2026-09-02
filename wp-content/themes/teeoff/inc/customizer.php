@@ -27,13 +27,21 @@ function teeoff_customize_register( $wp_customize ) {
 		'section' => 'teeoff_colors',
 	) ) );
 
+	/* Logos ---------------------------------------------------------- */
+	$wp_customize->add_section( 'teeoff_logos', array(
+		'title'       => __( 'Logos', 'teeoff' ),
+		'description' => __( "Le logo de l'en-tête se règle dans Identité du site (ci-dessus). Le champ ci-dessous permet d'utiliser un logo différent dans le pied de page ; laissez-le vide pour réutiliser le logo de l'en-tête.", 'teeoff' ),
+		'priority'    => 31,
+	) );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_footer_logo', __( 'Logo du pied de page', 'teeoff' ), 'teeoff_logos', 'image' );
+
 	/* Contact info --------------------------------------------------- */
 	$wp_customize->add_section( 'teeoff_contact', array(
-		'title'    => __( 'Coordonnees', 'teeoff' ),
+		'title'    => __( 'Coordonnées', 'teeoff' ),
 		'priority' => 35,
 	) );
 	$contact_fields = array(
-		'teeoff_phone'           => __( 'Telephone', 'teeoff' ),
+		'teeoff_phone'           => __( 'Téléphone', 'teeoff' ),
 		'teeoff_email'           => __( 'Email', 'teeoff' ),
 		'teeoff_address'         => __( 'Adresse', 'teeoff' ),
 		'teeoff_maps_embed'      => __( 'URL Google Maps (lien embed)', 'teeoff' ),
@@ -63,9 +71,9 @@ function teeoff_customize_register( $wp_customize ) {
 		'priority' => 40,
 	) );
 	teeoff_add_media_setting( $wp_customize, 'teeoff_hero_image', __( 'Image du Hero (ref. 2.1)', 'teeoff' ), 'teeoff_media_home', 'image' );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_hero_video', __( 'Video du Hero (ref. 15.1, .mp4)', 'teeoff' ), 'teeoff_media_home', 'file' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_hero_video', __( 'Vidéo du Hero (ref. 15.1, .mp4)', 'teeoff' ), 'teeoff_media_home', 'file' );
 	teeoff_add_media_setting( $wp_customize, 'teeoff_mission_image', __( 'Illustration Mission (ref. 3.1)', 'teeoff' ), 'teeoff_media_home', 'image' );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_technology_video', __( 'Video Technologie (ref. 15.3, .mp4)', 'teeoff' ), 'teeoff_media_home', 'file' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_technology_video', __( 'Vidéo Technologie (ref. 15.3, .mp4)', 'teeoff' ), 'teeoff_media_home', 'file' );
 	teeoff_add_media_setting( $wp_customize, 'teeoff_technology_poster', __( 'Image Technologie (ref. 7.1)', 'teeoff' ), 'teeoff_media_home', 'image' );
 
 	/* Other pages media -------------------------------------------------- */
@@ -73,14 +81,14 @@ function teeoff_customize_register( $wp_customize ) {
 		'title'    => __( 'Medias — Autres pages', 'teeoff' ),
 		'priority' => 41,
 	) );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_about_team_image', __( 'A propos — Equipe (ref. 10.1)', 'teeoff' ), 'teeoff_media_pages', 'image' );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_about_vision_image', __( 'A propos — Vision (ref. 10.2)', 'teeoff' ), 'teeoff_media_pages', 'image' );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_tech_hero_image', __( 'Technologie — Banniere (ref. 11.1)', 'teeoff' ), 'teeoff_media_pages', 'image' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_about_team_image', __( 'À propos — Équipe (ref. 10.1)', 'teeoff' ), 'teeoff_media_pages', 'image' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_about_vision_image', __( 'À propos — Vision (ref. 10.2)', 'teeoff' ), 'teeoff_media_pages', 'image' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_tech_hero_image', __( 'Technologie — Bannière (ref. 11.1)', 'teeoff' ), 'teeoff_media_pages', 'image' );
 	teeoff_add_media_setting( $wp_customize, 'teeoff_contact_image', __( 'Contact — Illustration (ref. 12.1)', 'teeoff' ), 'teeoff_media_pages', 'image' );
 	teeoff_add_media_setting( $wp_customize, 'teeoff_partnership_image', __( 'Devenir partenaire — Illustration (ref. 12.2)', 'teeoff' ), 'teeoff_media_pages', 'image' );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_careers_image', __( 'Carrieres — Illustration (ref. 13)', 'teeoff' ), 'teeoff_media_pages', 'image' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_careers_image', __( 'Carrières — Illustration (ref. 13)', 'teeoff' ), 'teeoff_media_pages', 'image' );
 	teeoff_add_media_setting( $wp_customize, 'teeoff_404_image', __( 'Page 404 — Illustration (ref. 14.1)', 'teeoff' ), 'teeoff_media_pages', 'image' );
-	teeoff_add_media_setting( $wp_customize, 'teeoff_og_image', __( 'Image de partage reseaux sociaux (ref. 1.2)', 'teeoff' ), 'teeoff_media_pages', 'image' );
+	teeoff_add_media_setting( $wp_customize, 'teeoff_og_image', __( 'Image de partage réseaux sociaux (ref. 1.2)', 'teeoff' ), 'teeoff_media_pages', 'image' );
 }
 add_action( 'customize_register', 'teeoff_customize_register' );
 

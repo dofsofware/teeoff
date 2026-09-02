@@ -13,15 +13,15 @@ function teeoff_provision_site() {
 
 	$pages = array(
 		'accueil'                      => array( 'title' => 'Accueil', 'template' => '' ),
-		'a-propos'                     => array( 'title' => 'A propos', 'template' => 'page-a-propos.php' ),
+		'a-propos'                     => array( 'title' => 'À propos', 'template' => 'page-a-propos.php' ),
 		'nos-solutions'                => array( 'title' => 'Nos solutions', 'template' => 'page-nos-solutions.php' ),
 		'technologie'                  => array( 'title' => 'Technologie', 'template' => 'page-technologie.php' ),
 		'partenaires'                  => array( 'title' => 'Partenaires', 'template' => 'page-partenaires.php' ),
-		'actualites'                   => array( 'title' => 'Actualites', 'template' => '' ),
-		'carrieres'                    => array( 'title' => 'Carrieres', 'template' => 'page-carrieres.php' ),
+		'actualites'                   => array( 'title' => 'Actualités', 'template' => '' ),
+		'carrieres'                    => array( 'title' => 'Carrières', 'template' => 'page-carrieres.php' ),
 		'contact'                      => array( 'title' => 'Contact', 'template' => 'page-contact.php' ),
-		'mentions-legales'             => array( 'title' => 'Mentions legales', 'template' => '' ),
-		'politique-de-confidentialite' => array( 'title' => 'Politique de confidentialite', 'template' => '' ),
+		'mentions-legales'             => array( 'title' => 'Mentions légales', 'template' => '' ),
+		'politique-de-confidentialite' => array( 'title' => 'Politique de confidentialité', 'template' => '' ),
 	);
 
 	$ids = array();
@@ -52,7 +52,7 @@ function teeoff_provision_site() {
 
 	update_option( 'permalink_structure', '/%postname%/' );
 
-	$categories = array( 'Nouveaux services', 'Nouveaux partenariats', 'Evenements', 'Communiques', 'Innovations technologiques', "Actualites de l'entreprise", 'Temoignages', 'Projets realises' );
+	$categories = array( 'Nouveaux services', 'Nouveaux partenariats', 'Événements', 'Communiqués', 'Innovations technologiques', "Actualités de l'entreprise", 'Témoignages', 'Projets réalisés' );
 	foreach ( $categories as $cat ) {
 		if ( ! term_exists( $cat, 'category' ) ) {
 			wp_insert_term( $cat, 'category' );
@@ -62,27 +62,27 @@ function teeoff_provision_site() {
 	if ( ! get_posts( array( 'post_type' => 'solution', 'numberposts' => 1, 'post_status' => 'any' ) ) ) {
 		$solutions = array(
 			array(
-				'title'    => 'Sante',
-				'subtitle' => 'Accedez a des services de sante et a la teleconsultation par la voix.',
-				'content'  => "<p>TeeOff Technologies permet d'acceder a des services de sante et a la teleconsultation grace aux technologies vocales, sans necessiter de smartphone ni de connexion Internet.</p>",
+				'title'    => 'Santé',
+				'subtitle' => 'Accédez à des services de santé et à la téléconsultation par la voix.',
+				'content'  => "<p>TeeOff Technologies SN permet d'accéder à des services de santé et à la téléconsultation grâce aux technologies vocales, sans nécessiter de smartphone ni de connexion Internet.</p>",
 				'ref'      => '4.1',
 			),
 			array(
-				'title'    => 'Education',
-				'subtitle' => "Accedez a des contenus pedagogiques et d'apprentissage par la voix.",
-				'content'  => "<p>Des contenus educatifs et pedagogiques sont accessibles simplement par un appel telephonique, dans plusieurs langues locales.</p>",
+				'title'    => 'Éducation',
+				'subtitle' => "Accédez à des contenus pédagogiques et d'apprentissage par la voix.",
+				'content'  => "<p>Des contenus éducatifs et pédagogiques sont accessibles simplement par un appel téléphonique, dans plusieurs langues locales.</p>",
 				'ref'      => '4.2',
 			),
 			array(
 				'title'    => 'Guides pratiques',
-				'subtitle' => "Informations utiles sur l'agriculture, les droits et les demarches administratives.",
-				'content'  => "<p>Retrouvez des guides pratiques sur l'agriculture, les demarches administratives, la prevention et vos droits, accessibles par telephone.</p>",
+				'subtitle' => "Informations utiles sur l'agriculture, les droits et les démarches administratives.",
+				'content'  => "<p>Retrouvez des guides pratiques sur l'agriculture, les démarches administratives, la prévention et vos droits, accessibles par téléphone.</p>",
 				'ref'      => '4.3',
 			),
 			array(
 				'title'    => 'Religion & Culture',
-				'subtitle' => 'Accedez a des contenus religieux et culturels dans les langues locales.',
-				'content'  => "<p>TeeOff donne acces a des contenus religieux et culturels dans les langues locales, pour rester connecte a ses traditions.</p>",
+				'subtitle' => 'Accédez à des contenus religieux et culturels dans les langues locales.',
+				'content'  => "<p>TeeOff Technologies SN donne accès à des contenus religieux et culturels dans les langues locales, pour rester connecté à ses traditions.</p>",
 				'ref'      => '4.4',
 			),
 		);
@@ -102,16 +102,16 @@ function teeoff_provision_site() {
 
 	teeoff_provision_menu( 'primary', 'Menu principal', array(
 		array( 'title' => 'Accueil', 'page' => 'accueil' ),
-		array( 'title' => 'A propos', 'page' => 'a-propos' ),
+		array( 'title' => 'À propos', 'page' => 'a-propos' ),
 		array( 'title' => 'Nos solutions', 'page' => 'nos-solutions' ),
 		array( 'title' => 'Technologie', 'page' => 'technologie' ),
 		array( 'title' => 'Partenaires', 'page' => 'partenaires' ),
 	), $ids );
 
 	teeoff_provision_menu( 'footer', 'Menu pied de page', array(
-		array( 'title' => 'Carrieres', 'page' => 'carrieres' ),
-		array( 'title' => 'Mentions legales', 'page' => 'mentions-legales' ),
-		array( 'title' => 'Politique de confidentialite', 'page' => 'politique-de-confidentialite' ),
+		array( 'title' => 'Carrières', 'page' => 'carrieres' ),
+		array( 'title' => 'Mentions légales', 'page' => 'mentions-legales' ),
+		array( 'title' => 'Politique de confidentialité', 'page' => 'politique-de-confidentialite' ),
 	), $ids );
 
 	flush_rewrite_rules();

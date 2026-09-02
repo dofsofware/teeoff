@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: A propos
+ * Template Name: À propos
  */
 defined( 'ABSPATH' ) || exit; get_header();
 
@@ -9,9 +9,9 @@ $teeoff_page_id = get_the_ID();
 
 <section class="page-hero page-hero--compact">
 	<div class="container">
-		<span class="eyebrow"><?php esc_html_e( 'A propos', 'teeoff' ); ?></span>
+		<span class="eyebrow"><?php esc_html_e( 'À propos', 'teeoff' ); ?></span>
 		<h1><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_title', 'Qui sommes-nous ?' ) ); ?></h1>
-		<p class="page-hero__lead"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_lead', "TeeOff Technologies concoit des services a valeur ajoutee (VAS) destines a rapprocher les populations urbaines et rurales des services essentiels du quotidien, en s'appuyant sur les technologies vocales et les reseaux telephoniques." ) ); ?></p>
+		<p class="page-hero__lead"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_lead', "TeeOff Technologies SN conçoit des services à valeur ajoutée (VAS) destinés à rapprocher les populations urbaines et rurales des services essentiels du quotidien, en s'appuyant sur les technologies vocales et les réseaux téléphoniques." ) ); ?></p>
 	</div>
 </section>
 
@@ -23,13 +23,13 @@ $teeoff_page_id = get_the_ID();
 				'ratio'      => 'ratio-4-3',
 				'legacy_mod' => 'teeoff_about_team_image',
 				'ref'        => '10.1',
-				'label'      => __( 'Equipe TeeOff (prompt 10.1)', 'teeoff' ),
+				'label'      => __( 'Équipe TeeOff (prompt 10.1)', 'teeoff' ),
 			) );
 			?>
 		</div>
 		<div class="about-team__text">
 			<?php if ( get_the_content() ) : the_content(); else : ?>
-				<p><?php esc_html_e( "TeeOff Technologies developpe des solutions vocales innovantes pour rendre les services essentiels accessibles a tous, partout, y compris aux personnes ne disposant pas de smartphone ou de connexion Internet. L'entreprise s'appuie principalement sur les technologies vocales et les reseaux telephoniques afin de rendre ses services accessibles au plus grand nombre.", 'teeoff' ); ?></p>
+				<p><?php esc_html_e( "TeeOff Technologies SN développe des solutions vocales innovantes pour rendre les services essentiels accessibles à tous, partout, y compris aux personnes ne disposant pas de smartphone ou de connexion Internet. L'entreprise s'appuie principalement sur les technologies vocales et les réseaux téléphoniques afin de rendre ses services accessibles au plus grand nombre.", 'teeoff' ); ?></p>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -51,11 +51,11 @@ $teeoff_page_id = get_the_ID();
 	<div class="container about-vision__content">
 		<div class="about-vision__col">
 			<span class="eyebrow eyebrow--light"><?php esc_html_e( 'Notre vision', 'teeoff' ); ?></span>
-			<h2><?php echo esc_html( teeoff_field( $teeoff_page_id, 'vision_title', "Rendre l'essentiel accessible a tous, partout." ) ); ?></h2>
+			<h2><?php echo esc_html( teeoff_field( $teeoff_page_id, 'vision_title', "Rendre l'essentiel accessible à tous, partout." ) ); ?></h2>
 		</div>
 		<div class="about-vision__col">
 			<span class="eyebrow eyebrow--light"><?php esc_html_e( 'Notre mission', 'teeoff' ); ?></span>
-			<p><?php echo esc_html( teeoff_field( $teeoff_page_id, 'about_mission_text', "Utiliser les technologies vocales et les telecommunications pour faciliter l'acces aux services essentiels, en tenant compte des realites locales, de la diversite linguistique et des contraintes liees a l'acces a Internet." ) ); ?></p>
+			<p><?php echo esc_html( teeoff_field( $teeoff_page_id, 'about_mission_text', "Utiliser les technologies vocales et les télécommunications pour faciliter l'accès aux services essentiels, en tenant compte des réalités locales, de la diversité linguistique et des contraintes liées à l'accès à Internet." ) ); ?></p>
 		</div>
 	</div>
 </section>
@@ -68,12 +68,12 @@ $teeoff_page_id = get_the_ID();
 		</div>
 		<?php
 		$values = array(
-			'accessibilite' => __( 'Accessibilite', 'teeoff' ),
+			'accessibilite' => __( 'Accessibilité', 'teeoff' ),
 			'inclusion'     => __( 'Inclusion', 'teeoff' ),
 			'innovation'    => __( 'Innovation', 'teeoff' ),
 			'impact-social' => __( 'Impact social', 'teeoff' ),
-			'simplicite'    => __( 'Simplicite', 'teeoff' ),
-			'proximite'     => __( 'Proximite', 'teeoff' ),
+			'simplicite'    => __( 'Simplicité', 'teeoff' ),
+			'proximite'     => __( 'Proximité', 'teeoff' ),
 		);
 		?>
 		<div class="values-grid">
@@ -84,7 +84,7 @@ $teeoff_page_id = get_the_ID();
 				</div>
 			<?php endforeach; ?>
 		</div>
-		<p class="values-note"><?php esc_html_e( 'Ces valeurs seront validees par TeeOff avant integration definitive.', 'teeoff' ); ?></p>
+		<p class="values-note"><?php esc_html_e( 'Ces valeurs seront validées par TeeOff avant intégration définitive.', 'teeoff' ); ?></p>
 	</div>
 </section>
 

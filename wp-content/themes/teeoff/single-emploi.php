@@ -23,7 +23,7 @@
 			<div class="job-detail__content">
 				<?php the_content(); ?>
 				<?php if ( $profil ) : ?>
-					<h3><?php esc_html_e( 'Profil recherche', 'teeoff' ); ?></h3>
+					<h3><?php esc_html_e( 'Profil recherché', 'teeoff' ); ?></h3>
 					<p><?php echo nl2br( esc_html( $profil ) ); ?></p>
 				<?php endif; ?>
 			</div>

@@ -43,7 +43,7 @@
 <section class="section solutions solutions--compact">
 	<div class="container">
 		<div class="section-heading">
-			<span class="eyebrow"><?php esc_html_e( 'Continuer la decouverte', 'teeoff' ); ?></span>
+			<span class="eyebrow"><?php esc_html_e( 'Continuer la découverte', 'teeoff' ); ?></span>
 			<h2><?php esc_html_e( 'Nos autres solutions', 'teeoff' ); ?></h2>
 		</div>
 		<?php get_template_part( 'template-parts/content', 'solutions-grid' ); ?>

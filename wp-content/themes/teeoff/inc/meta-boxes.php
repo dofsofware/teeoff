@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
  * ------------------------------------------------------------------- */
 
 function teeoff_solution_meta_box() {
-	add_meta_box( 'teeoff_solution_details', __( 'Details de la solution', 'teeoff' ), 'teeoff_solution_meta_box_html', 'solution', 'normal', 'high' );
+	add_meta_box( 'teeoff_solution_details', __( 'Détails de la solution', 'teeoff' ), 'teeoff_solution_meta_box_html', 'solution', 'normal', 'high' );
 }
 add_action( 'add_meta_boxes', 'teeoff_solution_meta_box' );
 
@@ -20,7 +20,7 @@ function teeoff_solution_meta_box_html( $post ) {
 		<?php esc_html_e( "Pour changer l'image de cette carte : utilisez le bloc \"Image mise en avant\" dans la colonne de droite (au-dessus).", 'teeoff' ); ?>
 	</div>
 	<p>
-		<label for="teeoff_subtitle"><strong><?php esc_html_e( 'Accroche courte (affichee sur la carte)', 'teeoff' ); ?></strong></label><br>
+		<label for="teeoff_subtitle"><strong><?php esc_html_e( 'Accroche courte (affichée sur la carte)', 'teeoff' ); ?></strong></label><br>
 		<input type="text" id="teeoff_subtitle" name="teeoff_subtitle" value="<?php echo esc_attr( $subtitle ); ?>" class="widefat">
 	</p>
 	<p>
@@ -28,7 +28,7 @@ function teeoff_solution_meta_box_html( $post ) {
 		<textarea id="teeoff_benefits" name="teeoff_benefits" rows="5" class="widefat"><?php echo esc_textarea( $benefits ); ?></textarea>
 	</p>
 	<p>
-		<label for="teeoff_card_ref"><strong><?php esc_html_e( 'Reference prompt Leonardo (suggestion pour generer une image)', 'teeoff' ); ?></strong></label><br>
+		<label for="teeoff_card_ref"><strong><?php esc_html_e( 'Référence prompt Leonardo (suggestion pour générer une image)', 'teeoff' ); ?></strong></label><br>
 		<input type="text" id="teeoff_card_ref" name="teeoff_card_ref" value="<?php echo esc_attr( $card_ref ); ?>" class="widefat" placeholder="ex: 4.1">
 		<span class="description"><?php esc_html_e( "Ce champ n'affiche pas d'image, c'est juste un renvoi vers references/leonardo-ai-prompts.md.", 'teeoff' ); ?></span>
 	</p>
@@ -62,7 +62,7 @@ add_action( 'save_post_solution', 'teeoff_save_solution_meta' );
  * ------------------------------------------------------------------- */
 
 function teeoff_partenaire_meta_box() {
-	add_meta_box( 'teeoff_partenaire_details', __( 'Details du partenaire', 'teeoff' ), 'teeoff_partenaire_meta_box_html', 'partenaire', 'normal', 'high' );
+	add_meta_box( 'teeoff_partenaire_details', __( 'Détails du partenaire', 'teeoff' ), 'teeoff_partenaire_meta_box_html', 'partenaire', 'normal', 'high' );
 }
 add_action( 'add_meta_boxes', 'teeoff_partenaire_meta_box' );
 
@@ -74,7 +74,7 @@ function teeoff_partenaire_meta_box_html( $post ) {
 		<label for="teeoff_website"><strong><?php esc_html_e( 'Site web du partenaire', 'teeoff' ); ?></strong></label><br>
 		<input type="url" id="teeoff_website" name="teeoff_website" value="<?php echo esc_attr( $url ); ?>" class="widefat" placeholder="https://">
 	</p>
-	<p class="description"><?php esc_html_e( 'Ajoutez le logo du partenaire comme image mise en avant. Definissez son type via la taxonomie "Types de partenariat".', 'teeoff' ); ?></p>
+	<p class="description"><?php esc_html_e( 'Ajoutez le logo du partenaire comme image mise en avant. Définissez son type via la taxonomie "Types de partenariat".', 'teeoff' ); ?></p>
 	<?php
 }
 
@@ -99,7 +99,7 @@ add_action( 'save_post_partenaire', 'teeoff_save_partenaire_meta' );
  * ------------------------------------------------------------------- */
 
 function teeoff_emploi_meta_box() {
-	add_meta_box( 'teeoff_emploi_details', __( "Details de l'offre", 'teeoff' ), 'teeoff_emploi_meta_box_html', 'emploi', 'normal', 'high' );
+	add_meta_box( 'teeoff_emploi_details', __( "Détails de l'offre", 'teeoff' ), 'teeoff_emploi_meta_box_html', 'emploi', 'normal', 'high' );
 }
 add_action( 'add_meta_boxes', 'teeoff_emploi_meta_box' );
 
@@ -116,7 +116,7 @@ function teeoff_emploi_meta_box_html( $post ) {
 		<input type="text" name="teeoff_lieu" value="<?php echo esc_attr( $lieu ); ?>" class="widefat"></p>
 	<p><label><strong><?php esc_html_e( 'Date limite', 'teeoff' ); ?></strong></label><br>
 		<input type="date" name="teeoff_limite" value="<?php echo esc_attr( $limite ); ?>"></p>
-	<p><label><strong><?php esc_html_e( 'Profil recherche', 'teeoff' ); ?></strong></label><br>
+	<p><label><strong><?php esc_html_e( 'Profil recherché', 'teeoff' ); ?></strong></label><br>
 		<textarea name="teeoff_profil" rows="4" class="widefat"><?php echo esc_textarea( $profil ); ?></textarea></p>
 	<?php
 }

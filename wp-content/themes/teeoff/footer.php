@@ -4,10 +4,21 @@
 <footer class="site-footer">
 	<div class="container site-footer__grid">
 		<div class="footer-brand">
-			<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
+			<?php
+			$teeoff_footer_logo_url = get_theme_mod( 'teeoff_footer_logo' );
+			if ( $teeoff_footer_logo_url ) :
+				?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
+					<img src="<?php echo esc_url( $teeoff_footer_logo_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="custom-logo" loading="lazy">
+				</a>
+				<?php
+			elseif ( has_custom_logo() ) :
+				the_custom_logo();
+			else :
+				?>
 				<span class="site-logo__text site-logo__text--light"><?php bloginfo( 'name' ); ?></span>
 			<?php endif; ?>
-			<p class="footer-tagline"><?php esc_html_e( "Rendre l'essentiel accessible a tous, partout.", 'teeoff' ); ?></p>
+			<p class="footer-tagline"><?php esc_html_e( "Rendre l'essentiel accessible à tous, partout.", 'teeoff' ); ?></p>
 			<div class="footer-social"><?php teeoff_social_links(); ?></div>
 		</div>
 
@@ -53,7 +64,7 @@
 
 	<div class="site-footer__bottom">
 		<div class="container">
-			<p>&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Tous droits reserves.', 'teeoff' ); ?></p>
+			<p>&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Tous droits réservés.', 'teeoff' ); ?></p>
 			<p class="site-footer__baseline"><?php esc_html_e( 'Un appel. Un service. Un impact.', 'teeoff' ); ?></p>
 		</div>
 	</div>

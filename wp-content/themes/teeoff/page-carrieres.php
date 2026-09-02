@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Carrieres
+ * Template Name: Carrières
  */
 defined( 'ABSPATH' ) || exit; get_header();
 
@@ -16,13 +16,13 @@ $teeoff_page_id = get_the_ID();
 			'legacy_mod'            => 'teeoff_careers_image',
 			'use_featured_fallback' => true,
 			'ref'                   => '13',
-			'label'                 => __( 'Illustration Carrieres (prompt 13)', 'teeoff' ),
+			'label'                 => __( 'Illustration Carrières (prompt 13)', 'teeoff' ),
 		) );
 		?>
 		<div class="page-hero__overlay"></div>
 	</div>
 	<div class="container page-hero__content">
-		<span class="eyebrow eyebrow--light"><?php esc_html_e( 'Carrieres', 'teeoff' ); ?></span>
+		<span class="eyebrow eyebrow--light"><?php esc_html_e( 'Carrières', 'teeoff' ); ?></span>
 		<h1><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_title', "Rejoignez l'aventure TeeOff" ) ); ?></h1>
 		<p class="page-hero__lead"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_lead', 'Nous construisons une technologie qui rapproche des millions de personnes des services essentiels. Venez y contribuer.' ) ); ?></p>
 	</div>
@@ -55,7 +55,7 @@ $teeoff_page_id = get_the_ID();
 			</div>
 		<?php else : ?>
 			<div class="empty-state">
-				<p><?php esc_html_e( "Aucune offre n'est publiee pour le moment. Revenez bientot !", 'teeoff' ); ?></p>
+				<p><?php esc_html_e( "Aucune offre n'est publiée pour le moment. Revenez bientôt !", 'teeoff' ); ?></p>
 			</div>
 		<?php endif; ?>
 	</div>

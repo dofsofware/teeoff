@@ -4,7 +4,7 @@
 	<article <?php post_class( 'article' ); ?>>
 		<section class="page-hero page-hero--compact">
 			<div class="container">
-				<span class="eyebrow"><?php $cats = get_the_category(); echo esc_html( $cats ? $cats[0]->name : __( 'Actualites', 'teeoff' ) ); ?></span>
+				<span class="eyebrow"><?php $cats = get_the_category(); echo esc_html( $cats ? $cats[0]->name : __( 'Actualités', 'teeoff' ) ); ?></span>
 				<h1><?php the_title(); ?></h1>
 				<div class="article-meta">
 					<span><?php echo esc_html( get_the_date() ); ?></span>

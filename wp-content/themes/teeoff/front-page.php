@@ -15,19 +15,19 @@ $teeoff_page_id = get_the_ID();
 				'size'                  => 'teeoff-banner',
 				'legacy_mod'            => 'teeoff_hero_image',
 				'use_featured_fallback' => true,
-				'alt'                   => __( 'TeeOff Technologies — services vocaux accessibles', 'teeoff' ),
+				'alt'                   => __( 'TeeOff Technologies SN — services vocaux accessibles', 'teeoff' ),
 				'ref'                   => '2.1',
-				'label'                 => __( 'Hero — personne utilisant un telephone (prompt 2.1)', 'teeoff' ),
+				'label'                 => __( 'Hero — personne utilisant un téléphone (prompt 2.1)', 'teeoff' ),
 			) );
 		}
 		?>
 		<div class="hero__overlay"></div>
 	</div>
 	<div class="container hero__content">
-		<h1 class="hero__title"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_title', "Rendre l'essentiel accessible a tous, partout." ) ); ?></h1>
-		<p class="hero__subtitle"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_subtitle', "TeeOff Technologies utilise les technologies vocales pour rapprocher les populations urbaines et rurales des services essentiels — sante, education, guides pratiques, religion et culture — meme sans smartphone ni connexion Internet." ) ); ?></p>
+		<h1 class="hero__title"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_title', "Rendre l'essentiel accessible à tous, partout." ) ); ?></h1>
+		<p class="hero__subtitle"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_subtitle', "TeeOff Technologies SN utilise les technologies vocales pour rapprocher les populations urbaines et rurales des services essentiels — santé, éducation, guides pratiques, religion et culture — même sans smartphone ni connexion Internet." ) ); ?></p>
 		<div class="hero__actions">
-			<a href="<?php echo esc_url( home_url( '/nos-solutions/' ) ); ?>" class="btn btn--secondary"><?php esc_html_e( 'Decouvrir nos solutions', 'teeoff' ); ?></a>
+			<a href="<?php echo esc_url( home_url( '/nos-solutions/' ) ); ?>" class="btn btn--secondary"><?php esc_html_e( 'Découvrir nos solutions', 'teeoff' ); ?></a>
 			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--outline"><?php esc_html_e( 'Nous contacter', 'teeoff' ); ?></a>
 		</div>
 	</div>
@@ -48,7 +48,7 @@ $teeoff_page_id = get_the_ID();
 		<div class="mission__text">
 			<span class="eyebrow"><?php esc_html_e( 'Notre mission', 'teeoff' ); ?></span>
 			<h2><?php echo esc_html( teeoff_field( $teeoff_page_id, 'mission_title', 'Un appel. Un service. Un impact.' ) ); ?></h2>
-			<p><?php echo esc_html( teeoff_field( $teeoff_page_id, 'mission_text', "TeeOff Technologies developpe des services a valeur ajoutee accessibles par telephone afin de rapprocher les populations des services essentiels du quotidien, en tenant compte des realites locales, de la diversite linguistique et des contraintes liees a l'acces a Internet." ) ); ?></p>
+			<p><?php echo esc_html( teeoff_field( $teeoff_page_id, 'mission_text', "TeeOff Technologies SN développe des services à valeur ajoutée accessibles par téléphone afin de rapprocher les populations des services essentiels du quotidien, en tenant compte des réalités locales, de la diversité linguistique et des contraintes liées à l'accès à Internet." ) ); ?></p>
 			<a href="<?php echo esc_url( home_url( '/a-propos/' ) ); ?>" class="link-arrow"><?php esc_html_e( 'En savoir plus', 'teeoff' ); ?></a>
 		</div>
 	</div>
@@ -58,7 +58,7 @@ $teeoff_page_id = get_the_ID();
 	<div class="container">
 		<div class="section-heading">
 			<span class="eyebrow"><?php esc_html_e( 'Nos solutions', 'teeoff' ); ?></span>
-			<h2><?php esc_html_e( "Quatre domaines d'impact, un seul numero a composer", 'teeoff' ); ?></h2>
+			<h2><?php esc_html_e( "Quatre domaines d'impact, un seul numéro à composer", 'teeoff' ); ?></h2>
 		</div>
 		<?php get_template_part( 'template-parts/content', 'solutions-grid' ); ?>
 	</div>
@@ -68,7 +68,7 @@ $teeoff_page_id = get_the_ID();
 	<div class="container">
 		<div class="section-heading">
 			<span class="eyebrow"><?php esc_html_e( 'Pourquoi TeeOff ?', 'teeoff' ); ?></span>
-			<h2><?php esc_html_e( 'Une technologie pensee pour tous', 'teeoff' ); ?></h2>
+			<h2><?php esc_html_e( 'Une technologie pensée pour tous', 'teeoff' ); ?></h2>
 		</div>
 		<?php get_template_part( 'template-parts/content', 'why-teeoff' ); ?>
 	</div>
@@ -77,8 +77,8 @@ $teeoff_page_id = get_the_ID();
 <section class="section how-it-works">
 	<div class="container">
 		<div class="section-heading">
-			<span class="eyebrow"><?php esc_html_e( 'Comment ca fonctionne ?', 'teeoff' ); ?></span>
-			<h2><?php esc_html_e( 'En quatre etapes simples', 'teeoff' ); ?></h2>
+			<span class="eyebrow"><?php esc_html_e( 'Comment ça fonctionne ?', 'teeoff' ); ?></span>
+			<h2><?php esc_html_e( 'En quatre étapes simples', 'teeoff' ); ?></h2>
 		</div>
 		<?php get_template_part( 'template-parts/content', 'how-it-works' ); ?>
 	</div>
@@ -96,7 +96,7 @@ $teeoff_page_id = get_the_ID();
 				'size'       => 'teeoff-banner',
 				'legacy_mod' => 'teeoff_technology_poster',
 				'ref'        => '7.1 / 15.3',
-				'label'      => __( 'Video/illustration Technologie (prompt 7.1 / 15.3)', 'teeoff' ),
+				'label'      => __( 'Vidéo/illustration Technologie (prompt 7.1 / 15.3)', 'teeoff' ),
 			) );
 		}
 		?>
@@ -109,7 +109,7 @@ $teeoff_page_id = get_the_ID();
 			<?php
 			$technology_items = teeoff_field_lines( $teeoff_page_id, 'technology_items', array(
 				'Interfaces vocales intuitives',
-				'Telephonie classique et mobile',
+				'Téléphonie classique et mobile',
 				'Intelligence artificielle',
 				'Traitement automatique de la voix',
 				'Multilinguisme (langues locales)',
@@ -120,7 +120,7 @@ $teeoff_page_id = get_the_ID();
 				<li><?php echo esc_html( $item ); ?></li>
 			<?php endforeach; ?>
 		</ul>
-		<a href="<?php echo esc_url( home_url( '/technologie/' ) ); ?>" class="btn btn--secondary"><?php esc_html_e( 'Decouvrir la technologie', 'teeoff' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/technologie/' ) ); ?>" class="btn btn--secondary"><?php esc_html_e( 'Découvrir la technologie', 'teeoff' ); ?></a>
 	</div>
 </section>
 
@@ -149,8 +149,8 @@ if ( $news ) :
 	<section class="section news">
 		<div class="container">
 			<div class="section-heading">
-				<span class="eyebrow"><?php esc_html_e( 'Actualites', 'teeoff' ); ?></span>
-				<h2><?php esc_html_e( 'Les dernieres nouvelles de TeeOff', 'teeoff' ); ?></h2>
+				<span class="eyebrow"><?php esc_html_e( 'Actualités', 'teeoff' ); ?></span>
+				<h2><?php esc_html_e( 'Les dernières nouvelles de TeeOff', 'teeoff' ); ?></h2>
 			</div>
 			<div class="news-grid">
 				<?php foreach ( $news as $post ) : setup_postdata( $post ); ?>
@@ -171,7 +171,7 @@ if ( $news ) :
 				<?php endforeach; wp_reset_postdata(); ?>
 			</div>
 			<div class="section-cta">
-				<a href="<?php echo esc_url( home_url( '/actualites/' ) ); ?>" class="link-arrow"><?php esc_html_e( 'Toutes les actualites', 'teeoff' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/actualites/' ) ); ?>" class="link-arrow"><?php esc_html_e( 'Toutes les actualités', 'teeoff' ); ?></a>
 			</div>
 		</div>
 	</section>

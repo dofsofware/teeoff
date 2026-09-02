@@ -43,7 +43,7 @@ function teeoff_media_image( $args = array() ) {
 		esc_attr( $classes ),
 		$args['ref'] ? ' data-prompt-ref="' . esc_attr( $args['ref'] ) . '"' : '',
 		teeoff_placeholder_icon_svg(),
-		esc_html( $args['label'] ? $args['label'] : __( 'Image a generer', 'teeoff' ) )
+		esc_html( $args['label'] ? $args['label'] : __( 'Image à générer', 'teeoff' ) )
 	);
 }
 
@@ -84,7 +84,7 @@ function teeoff_media_video( $args = array() ) {
 		esc_attr( $classes ),
 		$args['ref'] ? ' data-prompt-ref="' . esc_attr( $args['ref'] ) . '"' : '',
 		teeoff_placeholder_icon_svg( true ),
-		esc_html( $args['label'] ? $args['label'] : __( 'Video a generer', 'teeoff' ) )
+		esc_html( $args['label'] ? $args['label'] : __( 'Vidéo à générer', 'teeoff' ) )
 	);
 }
 
@@ -150,6 +150,6 @@ function teeoff_prompt_admin_notice() {
 	if ( ! is_user_logged_in() || ! current_user_can( 'edit_posts' ) ) {
 		return;
 	}
-	echo '<div class="teeoff-admin-hint">' . esc_html__( 'Les zones en pointilles indiquent un media a generer avec Leonardo AI. Le numero affiche renvoie a references/leonardo-ai-prompts.md', 'teeoff' ) . '</div>';
+	echo '<div class="teeoff-admin-hint">' . esc_html__( 'Les zones en pointillés indiquent un média à générer avec Leonardo AI. Le numéro affiché renvoie à references/leonardo-ai-prompts.md', 'teeoff' ) . '</div>';
 }
 add_action( 'wp_body_open', 'teeoff_prompt_admin_notice' );

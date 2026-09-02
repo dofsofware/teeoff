@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 function teeoff_handle_contact_form() {
 	if ( ! isset( $_POST['teeoff_contact_nonce'] ) || ! wp_verify_nonce( $_POST['teeoff_contact_nonce'], 'teeoff_contact_form' ) ) {
-		wp_die( esc_html__( 'Requete invalide.', 'teeoff' ) );
+		wp_die( esc_html__( 'Requête invalide.', 'teeoff' ) );
 	}
 	if ( ! empty( $_POST['teeoff_website_hp'] ) ) {
 		wp_safe_redirect( add_query_arg( 'teeoff_contact', 'error', wp_get_referer() ) );
@@ -31,7 +31,7 @@ function teeoff_handle_contact_form() {
 
 	$to      = get_theme_mod( 'teeoff_notify_email' ) ? get_theme_mod( 'teeoff_notify_email' ) : get_option( 'admin_email' );
 	$title   = $subject ? $subject : __( 'Nouveau message', 'teeoff' );
-	$body    = "Nom: $name\nOrganisation: $org\nEmail: $email\nTelephone: $phone\nObjet: $subject\n\nMessage:\n$message";
+	$body    = "Nom: $name\nOrganisation: $org\nEmail: $email\nTéléphone: $phone\nObjet: $subject\n\nMessage:\n$message";
 	$headers = array( 'Content-Type: text/plain; charset=UTF-8', 'Reply-To: ' . $email );
 
 	wp_mail( $to, '[Contact TeeOff] ' . $title, $body, $headers );
@@ -44,7 +44,7 @@ add_action( 'admin_post_nopriv_teeoff_contact_submit', 'teeoff_handle_contact_fo
 
 function teeoff_handle_partnership_form() {
 	if ( ! isset( $_POST['teeoff_partnership_nonce'] ) || ! wp_verify_nonce( $_POST['teeoff_partnership_nonce'], 'teeoff_partnership_form' ) ) {
-		wp_die( esc_html__( 'Requete invalide.', 'teeoff' ) );
+		wp_die( esc_html__( 'Requête invalide.', 'teeoff' ) );
 	}
 	if ( ! empty( $_POST['teeoff_website_hp'] ) ) {
 		wp_safe_redirect( add_query_arg( 'teeoff_partnership', 'error', wp_get_referer() ) );
@@ -68,7 +68,7 @@ function teeoff_handle_partnership_form() {
 
 	$to      = get_theme_mod( 'teeoff_notify_email' ) ? get_theme_mod( 'teeoff_notify_email' ) : get_option( 'admin_email' );
 	$title   = $org ? $org : $name;
-	$body    = "Nom: $name\nOrganisation: $org\nFonction: $role\nEmail: $email\nTelephone: $phone\nType de partenariat: $type\n\nMessage:\n$message";
+	$body    = "Nom: $name\nOrganisation: $org\nFonction: $role\nEmail: $email\nTéléphone: $phone\nType de partenariat: $type\n\nMessage:\n$message";
 	$headers = array( 'Content-Type: text/plain; charset=UTF-8', 'Reply-To: ' . $email );
 
 	wp_mail( $to, '[Demande de partenariat] ' . $title, $body, $headers, $attachments );
@@ -81,7 +81,7 @@ add_action( 'admin_post_nopriv_teeoff_partnership_submit', 'teeoff_handle_partne
 
 function teeoff_handle_job_application() {
 	if ( ! isset( $_POST['teeoff_job_nonce'] ) || ! wp_verify_nonce( $_POST['teeoff_job_nonce'], 'teeoff_job_form' ) ) {
-		wp_die( esc_html__( 'Requete invalide.', 'teeoff' ) );
+		wp_die( esc_html__( 'Requête invalide.', 'teeoff' ) );
 	}
 	if ( ! empty( $_POST['teeoff_website_hp'] ) ) {
 		wp_safe_redirect( add_query_arg( 'teeoff_job', 'error', wp_get_referer() ) );
@@ -101,9 +101,9 @@ function teeoff_handle_job_application() {
 
 	$attachments = teeoff_handle_optional_upload( 'cv' );
 
-	$job_title = $job_id ? get_the_title( $job_id ) : __( 'Candidature spontanee', 'teeoff' );
+	$job_title = $job_id ? get_the_title( $job_id ) : __( 'Candidature spontanée', 'teeoff' );
 	$to        = get_theme_mod( 'teeoff_notify_email' ) ? get_theme_mod( 'teeoff_notify_email' ) : get_option( 'admin_email' );
-	$body      = "Poste: $job_title\nNom: $name\nEmail: $email\nTelephone: $phone\n\nMessage:\n$message";
+	$body      = "Poste: $job_title\nNom: $name\nEmail: $email\nTéléphone: $phone\n\nMessage:\n$message";
 	$headers   = array( 'Content-Type: text/plain; charset=UTF-8', 'Reply-To: ' . $email );
 
 	wp_mail( $to, '[Candidature] ' . $job_title . ' — ' . $name, $body, $headers, $attachments );

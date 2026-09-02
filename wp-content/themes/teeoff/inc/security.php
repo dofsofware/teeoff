@@ -30,7 +30,7 @@ function teeoff_check_login_attempts( $user, $username, $password ) {
 	$key      = 'teeoff_login_fail_' . md5( teeoff_get_ip() );
 	$attempts = (int) get_transient( $key );
 	if ( $attempts >= 5 ) {
-		return new WP_Error( 'too_many_attempts', __( 'Trop de tentatives de connexion. Reessayez dans 15 minutes.', 'teeoff' ) );
+		return new WP_Error( 'too_many_attempts', __( 'Trop de tentatives de connexion. Réessayez dans 15 minutes.', 'teeoff' ) );
 	}
 	return $user;
 }

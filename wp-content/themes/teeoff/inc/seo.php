@@ -22,7 +22,7 @@ function teeoff_seo_meta_box_html( $post ) {
 	<p>
 		<label for="teeoff_meta_description"><strong><?php esc_html_e( 'Meta description', 'teeoff' ); ?></strong></label><br>
 		<textarea id="teeoff_meta_description" name="teeoff_meta_description" rows="3" class="widefat" maxlength="160"><?php echo esc_textarea( $desc ); ?></textarea>
-		<span class="description"><?php esc_html_e( '160 caracteres max. Utilisee par les moteurs de recherche et lors du partage sur les reseaux sociaux.', 'teeoff' ); ?></span>
+		<span class="description"><?php esc_html_e( '160 caractères max. Utilisée par les moteurs de recherche et lors du partage sur les réseaux sociaux.', 'teeoff' ); ?></span>
 	</p>
 	<?php
 }

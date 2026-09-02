@@ -10,8 +10,8 @@ $teeoff_page_id = get_the_ID();
 <section class="page-hero page-hero--compact">
 	<div class="container">
 		<span class="eyebrow"><?php esc_html_e( 'Nos partenaires', 'teeoff' ); ?></span>
-		<h1><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_title', "Ils construisent l'accessibilite avec nous" ) ); ?></h1>
-		<p class="page-hero__lead"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_lead', "TeeOff Technologies collabore avec des entreprises technologiques, operateurs telecoms, etablissements de sante et d'education, et organisations culturelles pour elargir l'acces a ses services." ) ); ?></p>
+		<h1><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_title', "Ils construisent l'accessibilité avec nous" ) ); ?></h1>
+		<p class="page-hero__lead"><?php echo esc_html( teeoff_field( $teeoff_page_id, 'hero_lead', "TeeOff Technologies SN collabore avec des entreprises technologiques, opérateurs télécoms, établissements de santé et d'éducation, et organisations culturelles pour élargir l'accès à ses services." ) ); ?></p>
 	</div>
 </section>
 
@@ -29,8 +29,8 @@ $teeoff_page_id = get_the_ID();
 		</div>
 		<div class="partnership-cta__text">
 			<span class="eyebrow"><?php esc_html_e( 'Devenir partenaire', 'teeoff' ); ?></span>
-			<h2><?php esc_html_e( "Construisons ensemble l'acces aux services essentiels", 'teeoff' ); ?></h2>
-			<p><?php esc_html_e( 'Entreprises technologiques, operateurs telecoms, etablissements de sante ou d\'education, organisations religieuses ou culturelles : proposez un partenariat a TeeOff Technologies.', 'teeoff' ); ?></p>
+			<h2><?php esc_html_e( "Construisons ensemble l'accès aux services essentiels", 'teeoff' ); ?></h2>
+			<p><?php esc_html_e( 'Entreprises technologiques, opérateurs télécoms, établissements de santé ou d\'éducation, organisations religieuses ou culturelles : proposez un partenariat à TeeOff Technologies SN.', 'teeoff' ); ?></p>
 			<?php get_template_part( 'template-parts/form', 'partnership' ); ?>
 		</div>
 	</div>
