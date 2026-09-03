@@ -177,5 +177,4 @@ if ( $news ) :
 	</section>
 <?php endif; ?>
 
-<?php get_template_part( 'template-parts/content', 'cta' ); ?>
 <?php get_footer(); ?>
