@@ -6,6 +6,8 @@ $status = isset( $_GET['teeoff_partnership'] ) ? sanitize_key( $_GET['teeoff_par
 	<div class="form-notice form-notice--success"><?php esc_html_e( 'Merci, votre demande de partenariat a bien été envoyée.', 'teeoff' ); ?></div>
 <?php elseif ( 'mail_error' === $status ) : ?>
 	<div class="form-notice form-notice--error"><?php esc_html_e( "Votre demande n'a pas pu être envoyée pour une raison technique. Merci de réessayer plus tard ou de nous contacter directement par téléphone.", 'teeoff' ); ?></div>
+<?php elseif ( 'captcha_error' === $status ) : ?>
+	<div class="form-notice form-notice--error"><?php esc_html_e( "Merci de valider le contrôle anti-robot avant d'envoyer le formulaire.", 'teeoff' ); ?></div>
 <?php elseif ( 'error' === $status ) : ?>
 	<div class="form-notice form-notice--error"><?php esc_html_e( 'Une erreur est survenue. Merci de vérifier les champs obligatoires.', 'teeoff' ); ?></div>
 <?php endif; ?>
@@ -41,5 +43,6 @@ $status = isset( $_GET['teeoff_partnership'] ) ? sanitize_key( $_GET['teeoff_par
 	</div>
 	<div class="form-field"><label for="p_message"><?php esc_html_e( 'Message', 'teeoff' ); ?> *</label><textarea id="p_message" name="message" rows="5" required></textarea></div>
 	<div class="form-field"><label for="p_file"><?php esc_html_e( 'Pièce jointe (facultatif — PDF ou Word)', 'teeoff' ); ?></label><input type="file" id="p_file" name="attachment" accept=".pdf,.doc,.docx"></div>
-	<button type="submit" class="btn btn--primary"><?php esc_html_e( 'Envoyer la demande', 'teeoff' ); ?></button>
+	<?php teeoff_recaptcha_field(); ?>
+	<button type="submit" class="btn btn--primary" data-loading-text="<?php esc_attr_e( 'Envoi en cours…', 'teeoff' ); ?>"><?php esc_html_e( 'Envoyer la demande', 'teeoff' ); ?></button>
 </form>

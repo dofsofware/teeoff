@@ -1,7 +1,7 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 
-define( 'TEEOFF_VERSION', '1.1.1' );
+define( 'TEEOFF_VERSION', '1.1.2' );
 define( 'TEEOFF_DIR', get_template_directory() );
 define( 'TEEOFF_URI', get_template_directory_uri() );
 
@@ -12,6 +12,7 @@ require_once TEEOFF_DIR . '/inc/cpt.php';
 require_once TEEOFF_DIR . '/inc/meta-boxes.php';
 require_once TEEOFF_DIR . '/inc/page-fields.php';
 require_once TEEOFF_DIR . '/inc/customizer.php';
+require_once TEEOFF_DIR . '/inc/recaptcha.php';
 require_once TEEOFF_DIR . '/inc/forms.php';
 require_once TEEOFF_DIR . '/inc/smtp.php';
 require_once TEEOFF_DIR . '/inc/security.php';

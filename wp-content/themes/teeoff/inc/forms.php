@@ -24,6 +24,10 @@ function teeoff_handle_contact_form() {
 		wp_safe_redirect( add_query_arg( 'teeoff_contact', 'error', wp_get_referer() ) );
 		exit;
 	}
+	if ( ! teeoff_verify_recaptcha() ) {
+		wp_safe_redirect( add_query_arg( 'teeoff_contact', 'captcha_error', wp_get_referer() ) );
+		exit;
+	}
 
 	$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
 	$org     = isset( $_POST['organisation'] ) ? sanitize_text_field( wp_unslash( $_POST['organisation'] ) ) : '';
@@ -61,6 +65,10 @@ function teeoff_handle_partnership_form() {
 	}
 	if ( ! empty( $_POST['teeoff_website_hp'] ) ) {
 		wp_safe_redirect( add_query_arg( 'teeoff_partnership', 'error', wp_get_referer() ) );
+		exit;
+	}
+	if ( ! teeoff_verify_recaptcha() ) {
+		wp_safe_redirect( add_query_arg( 'teeoff_partnership', 'captcha_error', wp_get_referer() ) );
 		exit;
 	}
 

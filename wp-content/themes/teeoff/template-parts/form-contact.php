@@ -6,6 +6,8 @@ $status = isset( $_GET['teeoff_contact'] ) ? sanitize_key( $_GET['teeoff_contact
 	<div class="form-notice form-notice--success"><?php esc_html_e( 'Merci, votre message a bien été envoyé. Nous vous répondrons rapidement.', 'teeoff' ); ?></div>
 <?php elseif ( 'mail_error' === $status ) : ?>
 	<div class="form-notice form-notice--error"><?php esc_html_e( "Votre message n'a pas pu être envoyé pour une raison technique. Merci de réessayer plus tard ou de nous contacter directement par téléphone.", 'teeoff' ); ?></div>
+<?php elseif ( 'captcha_error' === $status ) : ?>
+	<div class="form-notice form-notice--error"><?php esc_html_e( "Merci de valider le contrôle anti-robot avant d'envoyer le formulaire.", 'teeoff' ); ?></div>
 <?php elseif ( 'error' === $status ) : ?>
 	<div class="form-notice form-notice--error"><?php esc_html_e( 'Une erreur est survenue. Merci de vérifier les champs obligatoires et de réessayer.', 'teeoff' ); ?></div>
 <?php endif; ?>
@@ -46,5 +48,6 @@ $status = isset( $_GET['teeoff_contact'] ) ? sanitize_key( $_GET['teeoff_contact
 	<div class="form-field form-field--checkbox">
 		<label><input type="checkbox" name="consent" value="1" required> <?php esc_html_e( 'J\'accepte que mes données soient utilisées pour traiter ma demande.', 'teeoff' ); ?> *</label>
 	</div>
-	<button type="submit" class="btn btn--primary"><?php esc_html_e( 'Envoyer', 'teeoff' ); ?></button>
+	<?php teeoff_recaptcha_field(); ?>
+	<button type="submit" class="btn btn--primary" data-loading-text="<?php esc_attr_e( 'Envoi en cours…', 'teeoff' ); ?>"><?php esc_html_e( 'Envoyer', 'teeoff' ); ?></button>
 </form>

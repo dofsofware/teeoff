@@ -21,6 +21,34 @@
 			} );
 		}
 
+		/* Form submission feedback: lock the button so a slow admin-post.php
+		   round trip (mail sending, file upload) can't be double-clicked. */
+		document.querySelectorAll( '.teeoff-form' ).forEach( function ( form ) {
+			form.addEventListener( 'submit', function () {
+				var button = form.querySelector( 'button[type="submit"]' );
+				if ( ! button || button.disabled ) { return; }
+				button.disabled = true;
+				button.classList.add( 'is-submitting' );
+				var loadingText = button.getAttribute( 'data-loading-text' );
+				if ( loadingText ) {
+					button.dataset.originalText = button.textContent;
+					button.textContent = loadingText;
+				}
+			} );
+		} );
+
+		/* Restore the button if the user navigates back to a cached page. */
+		window.addEventListener( 'pageshow', function ( event ) {
+			if ( ! event.persisted ) { return; }
+			document.querySelectorAll( '.teeoff-form button[type="submit"]' ).forEach( function ( button ) {
+				button.disabled = false;
+				button.classList.remove( 'is-submitting' );
+				if ( button.dataset.originalText ) {
+					button.textContent = button.dataset.originalText;
+				}
+			} );
+		} );
+
 		var header = document.getElementById( 'site-header' );
 		var heroTargets = document.querySelectorAll(
 			'.hero__title, .hero__subtitle, .hero__actions .btn, .page-hero .eyebrow, .page-hero h1, .page-hero__lead'
