@@ -13,6 +13,7 @@ require_once TEEOFF_DIR . '/inc/meta-boxes.php';
 require_once TEEOFF_DIR . '/inc/page-fields.php';
 require_once TEEOFF_DIR . '/inc/customizer.php';
 require_once TEEOFF_DIR . '/inc/forms.php';
+require_once TEEOFF_DIR . '/inc/smtp.php';
 require_once TEEOFF_DIR . '/inc/security.php';
 require_once TEEOFF_DIR . '/inc/seo.php';
 require_once TEEOFF_DIR . '/inc/provisioning.php';

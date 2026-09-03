@@ -1,6 +1,26 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 
+/**
+ * Fallback values shown on the live site until an admin overrides them in
+ * Personnaliser → Coordonnées. Customizer setting 'default' values only
+ * apply inside the Customizer preview, so templates must fall back to
+ * these directly via teeoff_get_contact_mod().
+ */
+function teeoff_contact_defaults() {
+	return array(
+		'teeoff_phone'   => '+221 33 821 86 71',
+		'teeoff_email'   => 'contact@teeofftechnologiesenegal.com',
+		'teeoff_address' => "02 Place de l'indépendance, Dakar Plateau, Sénégal",
+	);
+}
+
+function teeoff_get_contact_mod( $key ) {
+	$defaults = teeoff_contact_defaults();
+	$default  = isset( $defaults[ $key ] ) ? $defaults[ $key ] : '';
+	return get_theme_mod( $key, $default );
+}
+
 function teeoff_customize_register( $wp_customize ) {
 
 	/* Colors ------------------------------------------------------- */
@@ -53,9 +73,10 @@ function teeoff_customize_register( $wp_customize ) {
 		'teeoff_social_tiktok'   => __( 'TikTok URL', 'teeoff' ),
 		'teeoff_notify_email'    => __( 'Email de notification (formulaires)', 'teeoff' ),
 	);
+	$contact_defaults = teeoff_contact_defaults();
 	foreach ( $contact_fields as $id => $label ) {
 		$wp_customize->add_setting( $id, array(
-			'default'           => '',
+			'default'           => isset( $contact_defaults[ $id ] ) ? $contact_defaults[ $id ] : '',
 			'sanitize_callback' => 'sanitize_text_field',
 		) );
 		$wp_customize->add_control( $id, array(

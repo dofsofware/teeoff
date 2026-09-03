@@ -29,9 +29,9 @@ $teeoff_page_id = get_the_ID();
 
 			<ul class="contact-details">
 				<?php
-				$phone   = get_theme_mod( 'teeoff_phone' );
-				$email   = get_theme_mod( 'teeoff_email' );
-				$address = get_theme_mod( 'teeoff_address' );
+				$phone   = teeoff_get_contact_mod( 'teeoff_phone' );
+				$email   = teeoff_get_contact_mod( 'teeoff_email' );
+				$address = teeoff_get_contact_mod( 'teeoff_address' );
 				?>
 				<?php if ( $phone ) : ?><li><strong><?php esc_html_e( 'Téléphone', 'teeoff' ); ?></strong><a href="tel:<?php echo esc_attr( preg_replace( '/\s+/', '', $phone ) ); ?>"><?php echo esc_html( $phone ); ?></a></li><?php endif; ?>
 				<?php if ( $email ) : ?><li><strong><?php esc_html_e( 'Email', 'teeoff' ); ?></strong><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></li><?php endif; ?>

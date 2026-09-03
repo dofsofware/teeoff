@@ -49,9 +49,9 @@
 		<div class="footer-contact">
 			<h3><?php esc_html_e( 'Contact', 'teeoff' ); ?></h3>
 			<?php
-			$phone   = get_theme_mod( 'teeoff_phone' );
-			$email   = get_theme_mod( 'teeoff_email' );
-			$address = get_theme_mod( 'teeoff_address' );
+			$phone   = teeoff_get_contact_mod( 'teeoff_phone' );
+			$email   = teeoff_get_contact_mod( 'teeoff_email' );
+			$address = teeoff_get_contact_mod( 'teeoff_address' );
 			?>
 			<?php if ( $phone ) : ?><p><a href="tel:<?php echo esc_attr( preg_replace( '/\s+/', '', $phone ) ); ?>"><?php echo esc_html( $phone ); ?></a></p><?php endif; ?>
 			<?php if ( $email ) : ?><p><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></p><?php endif; ?>
